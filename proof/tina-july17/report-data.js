@@ -1370,6 +1370,10 @@ window.SALT_REPORT = {
   "iosAppVersion": "1.3.0",
   "iosBuildNumber": "8",
   "iosEnvironment": "Apple iPhone Simulator",
-  "iosCurrentSourceRevision": "36adae641e551262421917896d4f786458043ca8",
-  "iosCurrentSourceTestedAt": "2026-07-19T22:06:00.000Z"
+  "iosFullJourneyRevision": "36adae641e551262421917896d4f786458043ca8",
+  "iosFullJourneyTestedAt": "2026-07-19T22:06:00.000Z",
+  "iosFinalCandidateRevision": "f7499696ba0edd39186355d0b23cdf70ad2ca6f4",
+  "iosFinalCandidateTestedAt": "2026-07-19T23:45:00.000Z",
+  "iosCurrentSourceRevision": "f7499696ba0edd39186355d0b23cdf70ad2ca6f4",
+  "iosCurrentSourceTestedAt": "2026-07-19T23:45:00.000Z"
 };

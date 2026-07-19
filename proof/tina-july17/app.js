@@ -20,6 +20,8 @@
     ["R2-13", "AI-13147"],
   ];
   const expectedIosRevision = "ba97fa63d2764df53ee8ad5ad3aa0d87f6b406dc";
+  const expectedIosFullJourneyRevision = "36adae641e551262421917896d4f786458043ca8";
+  const expectedIosFinalCandidateRevision = "f7499696ba0edd39186355d0b23cdf70ad2ca6f4";
 
   const escapeHtml = (value = "") => String(value)
     .replaceAll("&", "&amp;")
@@ -70,6 +72,9 @@
     if (report.readyForReview !== true) errors.push("The report has not been approved for client review.");
     if (report.updated !== "July 19, 2026") errors.push("The report date is not current.");
     if (report.iosTestedRevision !== expectedIosRevision) errors.push("The current iPhone review version is not identified.");
+    if (report.iosFullJourneyRevision !== expectedIosFullJourneyRevision) errors.push("The complete iPhone member journey is not identified.");
+    if (report.iosFinalCandidateRevision !== expectedIosFinalCandidateRevision) errors.push("The final iPhone candidate is not identified.");
+    if (report.iosCurrentSourceRevision !== expectedIosFinalCandidateRevision) errors.push("The current iPhone source does not match the final candidate.");
     if (itemIds.length !== expectedIds.length || itemIds.some((id, index) => id !== expectedIds[index])) {
       errors.push("The feedback inventory is incomplete or out of order.");
     }
