@@ -284,6 +284,8 @@ button{font:inherit}
 .media-panel button{display:flex;width:100%;flex-direction:column;margin:0;padding:0;border:0;border-top:1px solid var(--line);background:var(--white);color:inherit;cursor:zoom-in;text-align:left}
 .media-panel button:focus-visible{outline:4px solid var(--amber);outline-offset:-4px}
 .media-panel img{width:100%;height:auto;max-height:none;object-fit:contain;background:var(--white)}
+.media-panel[data-proof-id="R2-02"].before button{overflow:hidden}
+.media-panel[data-proof-id="R2-02"].before img{width:155%;max-width:none;margin-left:-27.5%}
 .media-panel em{align-self:flex-end;padding:11px 15px;color:var(--stone);font-size:.68rem;font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:.07em}
 .media-panel button:hover em{color:var(--rose)}
 .change-arrow{align-self:center;display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);font-size:1.35rem}

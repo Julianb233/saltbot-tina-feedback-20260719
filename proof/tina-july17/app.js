@@ -210,7 +210,7 @@
       ? (labels.before || "What Tina reported")
       : (labels.after || "What the user check showed");
     const caption = isBefore ? item.issue : item.result;
-    return `<figure class="media-panel ${side}">
+    return `<figure class="media-panel ${side}" data-proof-id="${escapeHtml(item.id)}">
       <figcaption><span>${heading}</span><p>${copy(caption)}</p></figcaption>
       <button type="button" data-image="${escapeHtml(src)}" data-caption="${copy(caption)}" aria-label="${heading}: ${copy(caption)}. Open an optional larger view.">
         <img src="${escapeHtml(src)}" alt="${copy(caption)}" loading="lazy" decoding="async" />
