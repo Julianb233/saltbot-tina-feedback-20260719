@@ -1363,11 +1363,13 @@ window.SALT_REPORT = {
     "ba97fa63d2764df53ee8ad5ad3aa0d87f6b406dc"
   ],
   "requestedRevision": "ba97fa63d2764df53ee8ad5ad3aa0d87f6b406dc",
-  "proofRevision": "36adae641e551262421917896d4f786458043ca8",
+  "proofRevision": "a3caaa89d2a8e3207ee996f0447bd44ad5d69c79",
   "proofBaseUrl": "https://julianb233.github.io/saltbot-tina-feedback-20260719/proof/tina-july17/index.html",
   "iosTestedRevision": "ba97fa63d2764df53ee8ad5ad3aa0d87f6b406dc",
   "iosTestedAt": "2026-07-19T20:27:59.616Z",
   "iosAppVersion": "1.3.0",
   "iosBuildNumber": "8",
-  "iosEnvironment": "Apple iPhone Simulator"
+  "iosEnvironment": "Apple iPhone Simulator",
+  "iosCurrentSourceRevision": "36adae641e551262421917896d4f786458043ca8",
+  "iosCurrentSourceTestedAt": "2026-07-19T22:06:00.000Z"
 };

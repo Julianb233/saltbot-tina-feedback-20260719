@@ -103,12 +103,13 @@
               <article class="release-card" data-tone="passed">
                 <span class="release-status"><i></i>Passed on the live review site</span>
                 <h3>Live request and account protections</h3>
-                <p>Ninety-one safe live requests passed across 24 service actions on the current version. The focused Tina review also passed 43 deeper safeguards across the 11 actions most closely tied to her feedback. Signed-in URL reading and trend research completed successfully, and the eight actions called directly from the browser accepted the expected web request.</p>
+                <p>Ninety-one safe live requests passed across 24 service actions on the current version. The focused Tina review also passed 43 deeper safeguards across the 11 actions most closely tied to her feedback. Market Intel was then checked separately after an additional safeguard was found: signed-out use now stops before research begins, while one signed-in request completed and used exactly one allowance.</p>
                 <ul>
                   <li>Requests without a valid signed-in member stopped safely.</li>
                   <li>Empty, damaged, oversized, and unsupported requests returned a clear response instead of starting uncertain work.</li>
                   <li>Repeated or interrupted requests were checked so one member action does not create duplicate results.</li>
                   <li>Live trend research returned results from all five requested source groups.</li>
+                  <li>Market Intel now confirms the member and the available usage allowance before starting research or AI work.</li>
                   <li>The private DM reply journey opened the conversation, identified the sender, saved one reply, and cleared the reply box without contacting a real Instagram member.</li>
                 </ul>
                 <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13062/saltbot-edge-function-resilience-approval-to-ios-release-certification" target="_blank" rel="noreferrer">View the detailed live review <span aria-hidden="true">↗</span></a>
@@ -117,7 +118,7 @@
               <article class="release-card" data-tone="passed">
                 <span class="release-status"><i></i>Passed in Apple’s iPhone Simulator</span>
                 <h3>Current-version iPhone member journey</h3>
-                <p>The current reviewed iPhone version was rebuilt cleanly, installed with release settings, and checked as a signed-in member in Apple’s iPhone Simulator.</p>
+                <p>The current reviewed iPhone version was rebuilt cleanly, installed with release settings, and checked as a signed-in member in Apple’s iPhone Simulator. The later exact source revision containing the calendar-recovery update was then rebuilt and repeated independently.</p>
                 <ul>
                   <li>The clean uninstall, reinstall, and cold-launch check passed twice; both first launches reached the sign-in screen without the earlier blank pause.</li>
                   <li>The Dashboard and conversation composer opened correctly.</li>
@@ -125,6 +126,7 @@
                   <li>The saved weekly Calendar, individual day details, and Brand Studio opened correctly.</li>
                   <li>The signed-in session remained healthy after moving to the background, returning, fully closing, and reopening the app.</li>
                   <li>The installed app matched the reviewed version and had preview updates turned off.</li>
+                  <li>The exact later source revision passed two more clean launches, one new seven-day calendar request, and a full terminate-and-relaunch persistence check.</li>
                 </ul>
                 <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13088/saltbot-ios-fix-first-install-cold-launch-blank-screen-before-first" target="_blank" rel="noreferrer">View the iPhone check <span aria-hidden="true">↗</span></a>
               </article>
@@ -139,6 +141,7 @@
                   <li>Apple signing and App Store Connect still need to be connected for this release.</li>
                   <li>Tina’s Approve button records her decision, but it does not yet send the iPhone update to TestFlight or the App Store.</li>
                   <li>A backup AI service account needs its balance restored; the working fallback handled the tested request.</li>
+                  <li>A safe test of the anonymous daily allowance could not target the same anonymous visitor through the production gateway. The limiter is not proven broken, but this one live certification remains open.</li>
                 </ul>
                 <div class="release-links" aria-label="Release follow-up tasks">
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13076/saltbot-release-authenticate-tina-approval-and-persist-immutable" target="_blank" rel="noreferrer">Connect the exact approval <span aria-hidden="true">↗</span></a>
@@ -146,6 +149,7 @@
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13179/saltbot-release-blocker-restore-github-actions-billing-and-rerun-exact" target="_blank" rel="noreferrer">Restore automated release checks <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13078/saltbot-ios-provision-salt-app-store-signing-and-app-store-connect" target="_blank" rel="noreferrer">Connect Apple release access <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13193/saltbot-restore-openrouter-and-openai-provider-credit-headroom" target="_blank" rel="noreferrer">Restore backup service capacity <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13092/saltbot-edge-atomically-meter-anonymous-and-signed-in-paid-generation" target="_blank" rel="noreferrer">Finish the anonymous allowance proof <span aria-hidden="true">↗</span></a>
                 </div>
               </article>
             </div>
@@ -154,7 +158,7 @@
               <strong>The current web truth</strong>
               <p>The reviewed web build is live at preview.saltbot.ai. app.saltbot.ai remains on the prior production release until approval.</p>
               <strong>The current iPhone truth</strong>
-              <p>The public iPhone app is version 1.2.2, while the reviewed update is version 1.3.0. The current authenticated Simulator journey passed. Apple signing, physical-device and TestFlight verification, the connection from Tina’s approval to the reviewed build, and final App Store release remain separate steps.</p>
+              <p>The public iPhone app is version 1.2.2, while the reviewed update is version 1.3.0. The current authenticated Simulator journey passed, including an exact-source rerun of the latest calendar-recovery revision. Apple signing, physical-device and TestFlight verification, the connection from Tina’s approval to the reviewed build, and final App Store release remain separate steps.</p>
             </aside>
 
             <nav class="release-proof-jumps" aria-label="Jump to release proof">
@@ -162,6 +166,7 @@
               <a href="#latest-follow-up">Latest 13 points</a>
               <a href="#release-listing-launch">Listing Launch</a>
               <a href="#release-market-fit">Market Fit</a>
+              <a href="#release-market-intel">Market Intel safeguard</a>
               <a href="#release-iphone-current">Current iPhone journey</a>
               <a href="#item-index">All 52 feedback points</a>
             </nav>
@@ -225,6 +230,32 @@
                 <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13072/saltbot-edge-make-market-fit-comparison-replay-safe" target="_blank" rel="noreferrer">View Market Fit follow-up <span aria-hidden="true">↗</span></a>
               </article>
 
+              <article class="release-proof-card" id="release-market-intel">
+                <header>
+                  <div>
+                    <p class="item-kicker">Additional safeguard found during the final review</p>
+                    <h4>Market Intel now checks the member and usage allowance before research begins.</h4>
+                  </div>
+                  <span class="release-status"><i></i>Passed on the published review site</span>
+                </header>
+                <div class="release-story">
+                  <div><strong>Issue</strong><p>A direct Market Intel request could begin research and AI work before confirming that it came from a signed-in member with an available allowance.</p></div>
+                  <div><strong>What changed</strong><p>Market Intel now stops unsigned-in requests immediately and confirms one available usage allowance before it starts any research or AI work.</p></div>
+                  <div><strong>How it was user-tested</strong><p>A signed-out production request stopped at sign-in without using an allowance. A signed-in synthetic review request then completed with one allowance. The member page was repeated on the published review site with a private review account and synthetic market figures.</p></div>
+                  <div><strong>Result</strong><p>The signed-out boundary returned the expected stop, the signed-in request returned a complete report, the allowance advanced exactly once, and all synthetic test records were removed.</p></div>
+                </div>
+                <div class="release-before-after">
+                  <figure><figcaption><span>Before the member action</span><p>Market Intel is ready with synthetic market figures and no client information.</p></figcaption><img src="assets/release/market-intel-safeguard/before.png" alt="Market Intel form filled with synthetic review figures before analysis" /></figure>
+                  <div class="change-arrow" aria-hidden="true">→</div>
+                  <figure><figcaption><span>Verified member result</span><p>The signed-in request returns a complete balanced-market summary and key metrics.</p></figcaption><img src="assets/release/market-intel-safeguard/after.png" alt="Market Intel showing the completed synthetic balanced-market report" /></figure>
+                </div>
+                <div class="release-motion">
+                  <figure><figcaption>Short preview</figcaption><img src="assets/release/market-intel-safeguard/preview.gif" alt="Short preview of the signed-in Market Intel result" /></figure>
+                  <figure><figcaption>Complete walkthrough</figcaption><video controls playsinline preload="metadata" poster="assets/release/market-intel-safeguard/after.png" src="assets/release/market-intel-safeguard/walkthrough.mp4" aria-label="Complete signed-in Market Intel safeguard walkthrough"></video></figure>
+                </div>
+                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-12951/saltbot-analyze-market-no-user-gate-no-rate-limit-anon-key-unbounded" target="_blank" rel="noreferrer">View the Market Intel safeguard <span aria-hidden="true">↗</span></a>
+              </article>
+
               <article class="release-proof-card ios-release-proof" id="release-iphone-current">
                 <header>
                   <div>
@@ -238,6 +269,28 @@
                   <div><strong>What was prepared</strong><p>The reviewed iPhone version was rebuilt cleanly, installed with release settings, and confirmed to match the version being checked. The same version was then removed and installed again for an independent second first-launch check.</p></div>
                   <div><strong>How it was user-tested</strong><p>Two separate clean uninstall, reinstall, and cold-launch runs each reached the usable sign-in screen without the earlier blank pause. A signed-in review member then opened the Dashboard, submitted the weekly-calendar request once, reviewed all seven saved days and one day’s details, opened Brand Studio, moved the app to the background, returned, fully closed it, and launched it again.</p></div>
                   <div><strong>Result</strong><p>The clean first-launch check passed twice. The weekly request completed on its first submission with seven complete, distinct posts across seven days. Every checked member screen loaded, the session stayed signed in, and the app returned correctly after each lifecycle step.</p></div>
+                </div>
+                <div class="release-proof-heading">
+                  <p class="eyebrow dark">Latest exact-source rerun</p>
+                  <h3>The later calendar-recovery source was built and repeated independently.</h3>
+                  <p>The exact source revision 36adae64 produced a clean Release Simulator build. Two clean launches passed, one new weekly request returned seven distinct days without repeating the prior calendar, and the same calendar remained after the app was fully closed and reopened.</p>
+                </div>
+                <div class="release-before-after ios-cold-start">
+                  <figure><figcaption><span>First exact-source clean launch</span><p>The complete branded sign-in screen appeared without an empty pause.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/clean-install-1-login.png" alt="First exact-source iPhone clean launch reaching the SaltBot sign-in screen" /></figure>
+                  <div class="change-arrow" aria-hidden="true">→</div>
+                  <figure><figcaption><span>Second independent clean launch</span><p>The same exact source reached the complete sign-in screen again.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/clean-install-2-login.png" alt="Second exact-source iPhone clean launch reaching the SaltBot sign-in screen" /></figure>
+                </div>
+                <div class="ios-screenshot-grid" aria-label="Latest exact-source iPhone result screenshots">
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-authenticated-dashboard.png" alt="Exact-source SaltBot iPhone after review-member sign-in" /><figcaption>Signed-in app</figcaption></figure>
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-weekly-first-attempt-submitted.png" alt="Exact-source SaltBot iPhone with the weekly request submitted once" /><figcaption>One submission</figcaption></figure>
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-weekly-calendar-overview.png" alt="Exact-source SaltBot iPhone showing seven posts across one week and seven days" /><figcaption>7 posts · 1 week · 7 days</figcaption></figure>
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" alt="Exact-source SaltBot iPhone retaining the weekly calendar after full relaunch" /><figcaption>Calendar retained</figcaption></figure>
+                </div>
+                <div class="ios-video-grid">
+                  <figure><figcaption><strong>Exact-source clean launch 1</strong><span>Remove, install, and cold-launch the exact Release build</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/clean-install-1-login.png" src="assets/release/ios/current-36adae64/videos/clean-install-1-cold-launch.mp4" aria-label="First exact-source clean iPhone launch"></video></figure>
+                  <figure><figcaption><strong>Exact-source clean launch 2</strong><span>Repeat the independent remove, install, and cold launch</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/clean-install-2-login.png" src="assets/release/ios/current-36adae64/videos/clean-install-2-cold-launch.mp4" aria-label="Second exact-source clean iPhone launch"></video></figure>
+                  <figure><figcaption><strong>One weekly-calendar submission</strong><span>Continuous request and wait, followed by the complete saved result</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/36ada-weekly-calendar-overview.png" src="assets/release/ios/current-36adae64/videos/36ada-weekly-calendar-single-attempt.mp4" aria-label="Exact-source one-attempt weekly-calendar walkthrough"></video></figure>
+                  <figure><figcaption><strong>Full close and relaunch</strong><span>Close the app completely, reopen it, and retain the same calendar</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" src="assets/release/ios/current-36adae64/videos/36ada-terminated-relaunch-session-calendar-final.mp4" aria-label="Exact-source iPhone terminate and relaunch walkthrough"></video></figure>
                 </div>
                 <div class="release-before-after ios-cold-start">
                   <figure><figcaption><span>What Tina experienced</span><p>A fresh first launch could pause on an empty screen before sign-in became usable.</p></figcaption><img src="assets/release/ios/before-cold-start.png" alt="Earlier iPhone first launch showing the empty pause before sign-in" /></figure>
