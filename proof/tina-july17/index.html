@@ -119,6 +119,7 @@
                 <h3>Current-version iPhone member journey</h3>
                 <p>The current reviewed iPhone version was rebuilt cleanly, installed with release settings, and checked as a signed-in member in Apple’s iPhone Simulator.</p>
                 <ul>
+                  <li>The clean uninstall, reinstall, and cold-launch check passed twice; both first launches reached the sign-in screen without the earlier blank pause.</li>
                   <li>The Dashboard and conversation composer opened correctly.</li>
                   <li>A new weekly-calendar request completed on its first submission with seven complete, distinct posts across seven days.</li>
                   <li>The saved weekly Calendar, individual day details, and Brand Studio opened correctly.</li>
@@ -230,14 +231,17 @@
                 </header>
                 <div class="release-story">
                   <div><strong>Issue</strong><p>The iPhone version needed its own current, signed-in check so an earlier build or web result was not mistaken for proof of the reviewed app.</p></div>
-                  <div><strong>What was prepared</strong><p>The reviewed iPhone version was rebuilt cleanly, installed with release settings, and confirmed to match the version being checked.</p></div>
-                  <div><strong>How it was user-tested</strong><p>A fresh installation first reached the usable sign-in screen without the earlier blank pause. A signed-in review member then opened the Dashboard, submitted the weekly-calendar request once, reviewed all seven saved days and one day’s details, opened Brand Studio, moved the app to the background, returned, fully closed it, and launched it again.</p></div>
-                  <div><strong>Result</strong><p>The weekly request completed on its first submission with seven complete, distinct posts across seven days. Every checked member screen loaded, the session stayed signed in, and the app returned correctly after each lifecycle step.</p></div>
+                  <div><strong>What was prepared</strong><p>The reviewed iPhone version was rebuilt cleanly, installed with release settings, and confirmed to match the version being checked. The same version was then removed and installed again for an independent second first-launch check.</p></div>
+                  <div><strong>How it was user-tested</strong><p>Two separate clean uninstall, reinstall, and cold-launch runs each reached the usable sign-in screen without the earlier blank pause. A signed-in review member then opened the Dashboard, submitted the weekly-calendar request once, reviewed all seven saved days and one day’s details, opened Brand Studio, moved the app to the background, returned, fully closed it, and launched it again.</p></div>
+                  <div><strong>Result</strong><p>The clean first-launch check passed twice. The weekly request completed on its first submission with seven complete, distinct posts across seven days. Every checked member screen loaded, the session stayed signed in, and the app returned correctly after each lifecycle step.</p></div>
                 </div>
                 <div class="release-before-after ios-cold-start">
                   <figure><figcaption><span>What Tina experienced</span><p>A fresh first launch could pause on an empty screen before sign-in became usable.</p></figcaption><img src="assets/release/ios/before-cold-start.png" alt="Earlier iPhone first launch showing the empty pause before sign-in" /></figure>
                   <div class="change-arrow" aria-hidden="true">→</div>
-                  <figure><figcaption><span>Current first-install result</span><p>The clean reinstall and cold launch now reach the usable sign-in screen without the empty pause.</p></figcaption><img src="assets/release/ios/current-ba97fa63/clean-install-login.png" alt="Current clean iPhone installation reaching the usable SaltBot sign-in screen" /></figure>
+                  <figure><figcaption><span>First clean-install result</span><p>The first clean reinstall and cold launch reached the usable sign-in screen without the empty pause.</p></figcaption><img src="assets/release/ios/current-ba97fa63/clean-install-login.png" alt="First clean iPhone installation reaching the usable SaltBot sign-in screen" /></figure>
+                </div>
+                <div class="ios-repeat-proof">
+                  <figure><figcaption><span>Second clean-install result</span><p>The same reviewed version passed a second uninstall, reinstall, and cold launch, again reaching the complete sign-in screen without the earlier blank pause.</p></figcaption><img src="assets/release/ios/current-ba97fa63/second-clean-install-login.png" alt="Second clean iPhone installation reaching the complete SaltBot sign-in screen" /></figure>
                 </div>
                 <div class="ios-screenshot-grid" aria-label="Selected current iPhone user journey screenshots">
                   <figure><img src="assets/release/ios/current-ba97fa63/screenshots/authenticated-dashboard.png" alt="Current SaltBot iPhone Dashboard after sign-in" /><figcaption>Signed-in Dashboard</figcaption></figure>
@@ -258,6 +262,7 @@
                 </div>
                 <div class="ios-video-grid">
                   <figure><figcaption><strong>Clean first install</strong><span>Uninstall, reinstall, and cold launch to the usable sign-in screen</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-ba97fa63/clean-install-login.png" src="assets/release/ios/current-ba97fa63/clean-install-and-launch.mp4" aria-label="Current clean iPhone installation and cold-launch walkthrough"></video></figure>
+                  <figure><figcaption><strong>Second clean install</strong><span>Repeat the uninstall, reinstall, and cold launch on the same reviewed version</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-ba97fa63/second-clean-install-login.png" src="assets/release/ios/current-ba97fa63/second-clean-install-cold-launch.mp4" aria-label="Second clean iPhone installation and cold-launch walkthrough"></video></figure>
                   <figure><figcaption><strong>First-attempt weekly result</strong><span>One request, seven complete and distinct posts, seven days</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-ba97fa63/screenshots/chat-weekly-first-attempt-result.png" src="assets/release/ios/current-ba97fa63/weekly-calendar-first-attempt.mp4" aria-label="Current iPhone weekly-calendar first-attempt walkthrough"></video></figure>
                   <figure><figcaption><strong>Saved weekly Calendar</strong><span>Weekly overview and all seven saved posts</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-ba97fa63/screenshots/weekly-calendar-overview.png" src="assets/release/ios/current-ba97fa63/calendar-weekly-overview.mp4" aria-label="Current iPhone saved weekly Calendar walkthrough"></video></figure>
                   <figure><figcaption><strong>Calendar day details</strong><span>Open one saved day and review its useful details</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-ba97fa63/screenshots/weekly-calendar-day-details.png" src="assets/release/ios/current-ba97fa63/calendar-day-details.mp4" aria-label="Current iPhone calendar day-details walkthrough"></video></figure>
