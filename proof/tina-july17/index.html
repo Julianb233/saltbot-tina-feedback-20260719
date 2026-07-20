@@ -20,15 +20,15 @@
         <img src="assets/brand/salt-logo-expanded.png" alt="Salt" />
       </a>
       <nav aria-label="Report sections">
-        <a href="#summary">Results</a>
-        <a href="#latest-follow-up">Latest follow-up</a>
-        <a href="#release-readiness">Release readiness</a>
-        <a href="#item-index">All feedback</a>
+        <a href="#summary">Overview</a>
+        <a href="#latest-follow-up">Newest 13</a>
+        <a class="priority-link" href="#release-readiness">Whole-product check</a>
+        <a href="#item-index">All 52 points</a>
         <a href="#method">How we checked</a>
-        <a href="#proof">Before &amp; after</a>
-        <a href="#source">Original feedback</a>
+        <a href="#proof">Visual proof</a>
+        <a href="#source">Source notes</a>
       </nav>
-      <span id="report-date">July 19, 2026</span>
+      <span id="report-date">July 20, 2026</span>
     </header>
 
     <main id="main">
@@ -47,7 +47,7 @@
           <div class="hero-copy">
             <p class="eyebrow">SaltBot review report</p>
             <h1 id="hero-title">All 52 feedback points, in one clear place.<br /><em>Every result shown in plain English.</em></h1>
-            <p class="hero-lede">Each issue sits beside its visual record. Completed work, account-safe checks, and release steps are clearly separated.</p>
+            <p class="hero-lede">Each issue sits beside its visual record. The whole-product section also separates earlier proof, the current final check, and the steps that still require release approval.</p>
             <div class="audience"><span>Prepared for</span><strong>Tina</strong><i></i><strong>Sidney</strong><i></i><strong>Julian</strong></div>
           </div>
         </section>
@@ -63,6 +63,21 @@
             <strong>What a completed result means</strong>
             <p>The same member journey was repeated after the change. The final screen was checked, the result was reopened when it needed to stay saved, and the complete recording was placed beside the issue.</p>
           </aside>
+
+          <section class="status-guide" aria-labelledby="status-guide-title">
+            <div class="status-guide-heading">
+              <p class="eyebrow dark">How to read every status</p>
+              <h3 id="status-guide-title">Each label has one clear meaning.</h3>
+              <p>The color tells you how far the member journey went and whether an outside approval or live account was intentionally left untouched.</p>
+            </div>
+            <div class="status-guide-grid">
+              <article data-tone="fixed"><strong>Updated and passed</strong><p>The reported problem was corrected and the member journey reached the expected finish.</p></article>
+              <article data-tone="passed"><strong>Working as expected</strong><p>The reported path was repeated and already behaved correctly in the reviewed version.</p></article>
+              <article data-tone="protected"><strong>Safely verified</strong><p>Everything inside SaltBot was checked; the next step was stopped because it would change or contact a live account.</p></article>
+              <article data-tone="approval"><strong>Release approval required</strong><p>The private SaltBot step worked, but the live publishing or release action remains intentionally off.</p></article>
+              <article data-tone="deferred"><strong>Paused at Tina’s request</strong><p>The larger review is deliberately on hold and is not being presented as completed work.</p></article>
+            </div>
+          </section>
         </section>
 
         <section class="latest-follow-up" id="latest-follow-up" aria-labelledby="latest-follow-up-title">
@@ -93,93 +108,222 @@
           <div class="report-width">
             <div class="release-heading">
               <div>
-                <p class="eyebrow dark">Release readiness</p>
-                <h2 id="release-readiness-title">What is verified now, and what must happen before the current iPhone update can be released.</h2>
+                <p class="eyebrow dark">Whole-product review</p>
+                <h2 id="release-readiness-title">What passed on the final candidate—and what still needs release approval.</h2>
               </div>
-              <p>The live service review and iPhone release lanes are kept separate. A web or service result never counts as a current iPhone runtime result, and approving this report does not update the iPhone app by itself.</p>
+              <p>This section keeps earlier evidence from being mistaken for proof of the newer combined candidate. Web, iPhone, outside services, and public release each have their own finish line.</p>
             </div>
 
-            <div class="release-grid">
+            <aside class="current-review-banner passed" role="status">
+              <div><span>Current status</span><strong>The combined web and iPhone Simulator candidate passed its review.</strong></div>
+              <p>The final candidate was rebuilt from its exact saved version, checked twice through all 297 automated tests, opened across desktop and phone-sized web screens, and installed in Apple’s iPhone Simulator. Its newest before-and-after images and complete recordings are visible immediately below.</p>
+            </aside>
+
+            <div class="release-grid whole-product-grid">
               <article class="release-card" data-tone="passed">
-                <span class="release-status"><i></i>Passed on the live review site</span>
-                <h3>Live request and account protections</h3>
-                <p>Ninety-one safe live requests passed across 24 service actions on the reviewed version, followed by 43 deeper checks on the 11 actions most closely tied to Tina’s feedback. A final independent review then passed all 102 account, request, and usage-boundary checks across 18 live service actions.</p>
+                <span class="release-status"><i></i>Current candidate · reviewed and passed</span>
+                <h3>Current web and iPhone Simulator candidate</h3>
+                <p>The newest corrections were repeated from a member’s point of view on the exact combined candidate.</p>
                 <ul>
-                  <li>Requests without a valid signed-in member stopped safely.</li>
-                  <li>Empty, damaged, oversized, and unsupported requests returned a clear response instead of starting uncertain work.</li>
-                  <li>Repeated or interrupted requests were checked so one member action does not create duplicate results.</li>
-                  <li>Live trend research returned results from all five requested source groups.</li>
-                  <li>Market Intel now confirms the member and the available usage allowance before starting research or AI work.</li>
-                  <li>The private DM reply journey opened the conversation, identified the sender, saved one reply, and cleared the reply box without contacting a real Instagram member.</li>
-                  <li>The final review found and corrected two additional live-service gaps: one ownership check happened too late, and one feedback field had not reached the live database.</li>
-                  <li>The deployment instructions were also corrected so future updates keep each service action’s intended sign-in policy.</li>
+                  <li>All 297 automated tests passed twice, followed by the production build, type, style, and release-workflow checks.</li>
+                  <li>The final web build passed 102 of 102 page-and-screen checks against the review backend. Against today’s production backend it passed 96 of 102; only the three new public-share pages at desktop and phone widths are waiting for the matching privacy update.</li>
+                  <li>The public brand, asset, and conversation pages opened without a signed-in session on desktop and phone-sized screens.</li>
+                  <li>Brand Studio opened its real public page from the iPhone app in one tap and returned to the same signed-in screen.</li>
+                  <li>The admin menu opened below the iPhone safe area, stayed within the screen, copied the public SaltBot address, and closed normally.</li>
+                  <li>Each newly found issue received its own Linear task; one optional member-navigation Share shortcut remains a separate product decision.</li>
                 </ul>
-                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13062/saltbot-edge-function-resilience-approval-to-ios-release-certification" target="_blank" rel="noreferrer">View the detailed live review <span aria-hidden="true">↗</span></a>
+                <p class="release-callout"><strong>What this means today:</strong> the review candidate is ready for Tina’s decision. This is Simulator and review-environment proof—not a claim that production or TestFlight has already been updated.</p>
               </article>
 
               <article class="release-card" data-tone="passed">
-                <span class="release-status"><i></i>Passed in Apple’s iPhone Simulator</span>
-                <h3>Current-version iPhone member journey</h3>
-                <p>The reviewed iPhone member journey was repeated on the exact calendar-recovery source. The final candidate was then built from clean source, installed as an upgrade over that tested app, cold-launched, and confirmed to retain the signed-in member session.</p>
+                <span class="release-status"><i></i>Previously verified · earlier reviewed version</span>
+                <h3>Earlier live and iPhone proof</h3>
+                <p>Ninety-one safe live requests passed across 24 service actions on the reviewed version, followed by 43 deeper checks on the 11 actions most closely tied to Tina’s feedback. A final independent review then passed all 102 account, request, and usage-boundary checks across 18 live service actions. Those counts belong to the earlier reviewed version, not the newer combined candidate.</p>
                 <ul>
-                  <li>The clean uninstall, reinstall, and cold-launch check passed twice; both first launches reached the sign-in screen without the earlier blank pause.</li>
-                  <li>The Dashboard and conversation composer opened correctly.</li>
-                  <li>A new weekly-calendar request completed on its first submission with seven complete, distinct posts across seven days.</li>
+                  <li>The clean first-launch check passed twice on the earlier iPhone review version.</li>
+                  <li>The weekly request completed on its first submission with seven complete, distinct posts across seven days.</li>
                   <li>The saved weekly Calendar, individual day details, and Brand Studio opened correctly.</li>
-                  <li>The signed-in session remained healthy after moving to the background, returning, fully closing, and reopening the app.</li>
-                  <li>The installed app matched the reviewed version and had preview updates turned off.</li>
-                  <li>The exact later source revision passed two more clean launches, one new seven-day calendar request, and a full terminate-and-relaunch persistence check.</li>
-                  <li>No customer-facing or native iPhone files changed between that complete journey and the final candidate; the later work was limited to live-service protections, deployment checks, and their tests.</li>
-                  <li>The final candidate, version 1.3.0 build 8, passed a clean Release Simulator build and an upgrade-and-cold-relaunch check.</li>
+                  <li>The signed-in session remained available after the app moved to the background, fully closed, and reopened.</li>
+                  <li>Every one of Tina’s 52 points keeps its own issue statement, result, before image, after image, short preview, full video, and Linear task below.</li>
                 </ul>
-                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13088/saltbot-ios-fix-first-install-cold-launch-blank-screen-before-first" target="_blank" rel="noreferrer">View the iPhone check <span aria-hidden="true">↗</span></a>
+                <div class="release-links">
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13062/saltbot-edge-function-resilience-approval-to-ios-release-certification" target="_blank" rel="noreferrer">View the earlier service review <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13088/saltbot-ios-fix-first-install-cold-launch-blank-screen-before-first" target="_blank" rel="noreferrer">View the earlier iPhone check <span aria-hidden="true">↗</span></a>
+                </div>
               </article>
 
               <article class="release-card" data-tone="blocked">
-                <span class="release-status"><i></i>App Store release still needs setup</span>
-                <h3>TestFlight and App Store delivery</h3>
-                <p>The complete iPhone Simulator journey passed. Delivery through TestFlight and the App Store remains a separate release step.</p>
+                <span class="release-status"><i></i>Still needs approval or outside access</span>
+                <h3>Public web, real providers, and iPhone delivery</h3>
+                <p>Even after the current user check is complete, public release and real-world checks remain separate steps.</p>
                 <ul>
-                  <li>The reviewed update must be approved and added to Salt’s main release version.</li>
+                  <li>The reviewed update must be approved before the current web candidate is published.</li>
                   <li>The automated release service is currently paused by an account billing limit.</li>
-                  <li>Apple signing and App Store Connect still need to be connected for this release.</li>
+                  <li>The protected production database password still has to be added before the reviewed privacy update can install safely.</li>
+                  <li>The release workflow must be changed to stop unless the exact candidate has Tina’s authenticated approval and the required independent reviews.</li>
+                  <li>Harmless live checks still depend on working outside-service access and available provider capacity.</li>
+                  <li>Apple signing and App Store Connect still need to be connected for this release, followed by a physical iPhone and TestFlight check.</li>
                   <li>Tina’s Approve button records her decision, but it does not yet send the iPhone update to TestFlight or the App Store.</li>
                   <li>A backup AI service account needs its balance restored; the working fallback handled the tested request.</li>
-                  <li>A safe test of the anonymous daily allowance could not target the same anonymous visitor through the production gateway. The limiter is not proven broken, but this one live certification remains open.</li>
+                  <li>A safe test of the anonymous daily allowance could not target the same anonymous visitor through the public gateway. The allowance is not proven broken, but this one live confirmation remains open.</li>
                 </ul>
                 <div class="release-links" aria-label="Release follow-up tasks">
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13076/saltbot-release-authenticate-tina-approval-and-persist-immutable" target="_blank" rel="noreferrer">Connect the exact approval <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13077/saltbot-release-coordinate-exact-sha-web-and-ios-roll-up-after" target="_blank" rel="noreferrer">Prepare the reviewed iPhone build <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13179/saltbot-release-blocker-restore-github-actions-billing-and-rerun-exact" target="_blank" rel="noreferrer">Restore automated release checks <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13294/saltbot-release-blocker-provide-production-database-password-for" target="_blank" rel="noreferrer">Connect the protected database release setting <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13295/saltbot-release-governance-fail-closed-without-authenticated-approval" target="_blank" rel="noreferrer">Require the exact approval before release <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13078/saltbot-ios-provision-salt-app-store-signing-and-app-store-connect" target="_blank" rel="noreferrer">Connect Apple release access <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13193/saltbot-restore-openrouter-and-openai-provider-credit-headroom" target="_blank" rel="noreferrer">Restore backup service capacity <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13092/saltbot-edge-atomically-meter-anonymous-and-signed-in-paid-generation" target="_blank" rel="noreferrer">Finish the anonymous allowance proof <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13293/saltbot-product-decision-offer-share-saltbot-in-ordinary-member" target="_blank" rel="noreferrer">Decide whether members need a general Share shortcut <span aria-hidden="true">↗</span></a>
                 </div>
               </article>
             </div>
 
             <aside class="release-truth">
-              <strong>The current web truth</strong>
-              <p>The reviewed web build is live at preview.saltbot.ai. app.saltbot.ai remains on the prior production release until approval.</p>
-              <strong>The current iPhone truth</strong>
-              <p>The public iPhone app is version 1.2.2, while the reviewed update is version 1.3.0 build 8. The complete authenticated journey passed on the exact calendar-recovery source, and the final candidate then passed a clean Release build, upgrade installation, and cold relaunch with its signed-in session retained. Apple signing, physical-device and TestFlight verification, the connection from Tina’s approval to the reviewed build, and final App Store release remain separate steps.</p>
+              <strong>Earlier web proof</strong>
+              <p>The reviewed web build is live at preview.saltbot.ai. app.saltbot.ai remains on the prior production release until approval. The newer combined candidate described above has not been presented here as publicly released.</p>
+              <strong>Earlier iPhone proof</strong>
+              <p><strong>Passed in Apple’s iPhone Simulator</strong> on the earlier reviewed version. This was not a signed App Store package, a physical-device result, a TestFlight delivery, or a public App Store release.</p>
+              <strong>Current candidate</strong>
+              <p>The exact combined candidate passed its automated, desktop, phone-sized web, safe service-boundary, and Apple iPhone Simulator checks. Its newest visual proof is shown below. Production publishing, physical-device testing, and TestFlight remain separate approval steps.</p>
             </aside>
 
             <nav class="release-proof-jumps" aria-label="Jump to release proof">
               <span>Jump to proof</span>
+              <a href="#release-brand-contrast">Readable public brand page</a>
+              <a href="#release-native-share">iPhone public sharing</a>
+              <a href="#release-admin-menu">Phone menu and safe area</a>
+              <a href="#release-edge">Service and recovery checks</a>
               <a href="#latest-follow-up">Latest 13 points</a>
               <a href="#release-listing-launch">Listing Launch</a>
               <a href="#release-market-fit">Market Fit</a>
               <a href="#release-market-intel">Market Intel safeguard</a>
-              <a href="#release-iphone-current">Current iPhone journey</a>
+              <a href="#release-iphone-current">Earlier iPhone proof</a>
               <a href="#item-index">All 52 feedback points</a>
             </nav>
 
+            <section class="release-proof-library current-proof-library" aria-labelledby="current-release-proof-title">
+              <div class="release-proof-heading">
+                <p class="eyebrow dark">Final-candidate visual proof</p>
+                <h3 id="current-release-proof-title">The newest issues sit directly beside their corrected result.</h3>
+                <p>Every image is shown at full width on the page. The short preview and full recording are immediately underneath, so nothing has to be opened just to see whether a result exists.</p>
+              </div>
+
+              <article class="release-proof-card" id="release-brand-contrast">
+                <header>
+                  <div>
+                    <p class="item-kicker">Public brand page</p>
+                    <h4>Dark brand colors no longer hide the brand story, type, voice, or copy.</h4>
+                  </div>
+                  <span class="release-status"><i></i>Updated and passed · AI-13283</span>
+                </header>
+                <div class="release-story">
+                  <div><strong>Issue</strong><p>A dark brand palette could make several sections nearly disappear against the public page background.</p></div>
+                  <div><strong>What changed</strong><p>SaltBot now chooses readable foreground colors for every public brand section while preserving the client’s palette.</p></div>
+                  <div><strong>How it was user-tested</strong><p>The public page was opened on desktop and phone-sized screens with 48 difficult color samples. Every sample passed, and the smallest measured contrast remained comfortably readable.</p></div>
+                  <div><strong>Result</strong><p>The brand story, palette labels, typography, voice, and copy kit remain visibly readable from top to bottom.</p></div>
+                </div>
+                <div class="release-before-after">
+                  <figure><figcaption><span>Before — issue reproduced</span><p>The lower brand sections were present but almost invisible.</p></figcaption><img src="assets/release/final-f39/web/brand-before.png" alt="Earlier public brand page with several sections nearly invisible against the dark background" /></figure>
+                  <div class="change-arrow" aria-hidden="true">→</div>
+                  <figure><figcaption><span>After — final candidate</span><p>Every section is readable while the Salt Cinema colors remain intact.</p></figcaption><img src="assets/release/final-f39/web/brand-after.png" alt="Final public brand page with readable story, typography, voice, and copy sections" /></figure>
+                </div>
+                <div class="release-motion">
+                  <figure><figcaption>Short before-and-after preview</figcaption><img src="assets/release/final-f39/web/brand-preview.gif" alt="Short before-and-after preview of the public brand readability correction" /></figure>
+                  <figure><figcaption>Complete final-candidate walkthrough</figcaption><video controls playsinline preload="metadata" poster="assets/release/final-f39/web/brand-after.png" src="assets/release/final-f39/web/brand-walkthrough.mp4" aria-label="Complete final-candidate public brand readability walkthrough"></video></figure>
+                </div>
+                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13283/saltbot-public-brand-share-preserve-readable-contrast-for-arbitrary" target="_blank" rel="noreferrer">View the individual follow-up <span aria-hidden="true">↗</span></a>
+              </article>
+
+              <article class="release-proof-card" id="release-native-share">
+                <header>
+                  <div>
+                    <p class="item-kicker">iPhone Brand Studio sharing</p>
+                    <h4>One tap now opens the real public brand page and returns safely to SaltBot.</h4>
+                  </div>
+                  <span class="release-status"><i></i>Updated and passed in iPhone Simulator · AI-13288</span>
+                </header>
+                <div class="release-story">
+                  <div><strong>Issue</strong><p>The iPhone app could create an internal app address. Tapping it left the member on the same screen instead of opening the public page.</p></div>
+                  <div><strong>What changed</strong><p>Every authenticated sharing action now creates a normal secure SaltBot web address, including Brand Studio, saved assets, conversations, profiles, and the app link.</p></div>
+                  <div><strong>How it was user-tested</strong><p>The exact final candidate was rebuilt, installed in Apple’s iPhone 17 Pro Simulator, and opened with a retained signed-in review session. Brand Studio opened the hosted public page in one tap; its palette and typography were reviewed; the browser was closed; and the same Brand Studio screen remained.</p></div>
+                  <div><strong>Result</strong><p>The public page opened successfully, displayed the expected brand content, and returned to SaltBot without losing the member’s place.</p></div>
+                </div>
+                <div class="release-before-after ios-cold-start">
+                  <figure><figcaption><span>Before — issue reproduced</span><p>The earlier one-tap check remained on Brand Studio and did not open a public page.</p></figcaption><img src="assets/release/final-f39/ios/share-before.png" alt="Earlier iPhone one-tap check remaining on Brand Studio without opening the public share page" /></figure>
+                  <div class="change-arrow" aria-hidden="true">→</div>
+                  <figure><figcaption><span>After — final candidate</span><p>The hosted public Salt Cinema brand page opens with its readable sections.</p></figcaption><img src="assets/release/final-f39/ios/share-after.png" alt="Final iPhone candidate showing the hosted public Salt Cinema brand page" /></figure>
+                </div>
+                <div class="release-motion portrait-motion">
+                  <figure><figcaption>Short one-tap preview</figcaption><img src="assets/release/final-f39/ios/share-preview.gif" alt="Short preview of Brand Studio opening the public page in one tap and returning to SaltBot" /></figure>
+                  <figure><figcaption>Complete iPhone Simulator walkthrough</figcaption><video controls playsinline preload="metadata" poster="assets/release/final-f39/ios/share-after.png" src="assets/release/final-f39/ios/share-walkthrough.mp4" aria-label="Complete final-candidate iPhone public brand sharing walkthrough"></video></figure>
+                </div>
+                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13288/saltbot-ios-public-share-actions-must-use-a-hosted-https-origin" target="_blank" rel="noreferrer">View the individual follow-up <span aria-hidden="true">↗</span></a>
+              </article>
+
+              <article class="release-proof-card" id="release-admin-menu">
+                <header>
+                  <div>
+                    <p class="item-kicker">Phone-sized admin navigation</p>
+                    <h4>The menu is reachable, clears the iPhone notch, and keeps every action on screen.</h4>
+                  </div>
+                  <span class="release-status"><i></i>Updated and passed · AI-13290</span>
+                </header>
+                <div class="release-story">
+                  <div><strong>Issue</strong><p>Five protected admin pages contained navigation and Share actions, but the page did not provide a visible control to open them. The first correction also needed extra clearance for a notched iPhone.</p></div>
+                  <div><strong>What changed</strong><p>Desktop and phone layouts now include a clear menu button, normal close behavior, and spacing that follows the device’s safe area.</p></div>
+                  <div><strong>How it was user-tested</strong><p>The exact final page was checked at desktop width and at 390×844 with a simulated 31-pixel iPhone safe area. The menu opened, remained fully inside the screen, copied the public SaltBot address, and closed by Share, Escape, and the backdrop without any horizontal scrolling.</p></div>
+                  <div><strong>Result</strong><p>The phone menu starts below the header and notch, all actions remain visible, and the page stays usable at both widths.</p></div>
+                </div>
+                <div class="release-before-after ios-cold-start">
+                  <figure><figcaption><span>Before — issue reproduced</span><p>The protected page had no visible way to open its navigation and Share actions.</p></figcaption><img src="assets/release/final-f39/web/admin-before.png" alt="Earlier protected admin page without a visible menu opener" /></figure>
+                  <div class="change-arrow" aria-hidden="true">→</div>
+                  <figure><figcaption><span>After — final candidate</span><p>The complete menu is visible below the iPhone safe area.</p></figcaption><img src="assets/release/final-f39/web/admin-after.png" alt="Final phone-sized protected admin page with the menu open below the safe area" /></figure>
+                </div>
+                <div class="release-motion portrait-motion">
+                  <figure><figcaption>Short interaction preview</figcaption><img src="assets/release/final-f39/web/admin-preview.gif" alt="Short preview of the phone menu opening, sharing, and closing" /></figure>
+                  <figure><figcaption>Complete desktop and phone walkthrough</figcaption><video controls playsinline preload="metadata" poster="assets/release/final-f39/web/admin-after.png" src="assets/release/final-f39/web/admin-walkthrough.mp4" aria-label="Complete final-candidate desktop and phone admin menu walkthrough"></video></figure>
+                </div>
+                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13290/saltbot-protected-layout-restore-visible-desktop-and-mobile-menu" target="_blank" rel="noreferrer">View the individual follow-up <span aria-hidden="true">↗</span></a>
+              </article>
+
+              <article class="release-proof-card" id="release-edge">
+                <header>
+                  <div>
+                    <p class="item-kicker">Service, failure, and recovery boundaries</p>
+                    <h4>Expected mistakes stop clearly, retries stay bounded, and no unsafe live action was used as a test.</h4>
+                  </div>
+                  <span class="release-status"><i></i>Safe boundaries passed · AI-13286 and AI-13287</span>
+                </header>
+                <div class="release-story">
+                  <div><strong>Issue</strong><p>Some service checks could miss an unlisted function or count an expected signed-out response as a failure. A stale review setting could stop the test early, and production does not yet have the three new privacy-protected public-share reads.</p></div>
+                  <div><strong>What changed</strong><p>The review now discovers every service handler automatically, applies the correct expectation to each one, and uses the same valid public connection identity as the final build. The three public-share reads and their protected migration passed in the review environment and remain held from production until approved.</p></div>
+                  <div><strong>How it was user-tested</strong><p>All 43 exact-candidate sign-in, missing-information, not-found, and repeat-request boundaries passed across the 11 services closest to Tina’s feedback. The deployed review environment also passed 102 safe account, request, and usage-boundary checks across 18 service actions whose service source is unchanged in the final candidate. Separately, the exact web build passed 102 of 102 review-backend page checks and 96 of 102 against today’s production backend.</p></div>
+                  <div><strong>Result</strong><p>Expected mistakes return controlled guidance instead of an uncontrolled error, repeated work remains bounded, and the review connection now answers normally. The six production-backend page checks that remain are the same three new public-share pages at desktop and phone widths; they are waiting for the protected privacy update and are not being presented as live. Paid outside services, client publishing, and microphone transcription were intentionally not triggered.</p></div>
+                </div>
+                <div class="release-before-after">
+                  <figure><figcaption><span>Before rollout — current production</span><p>All other page checks pass twice; the same three public-share pages at desktop and phone widths are waiting for the database migration.</p></figcaption><img src="assets/release/final-f39/web/edge-before.png" alt="Current production whole-product check showing 96 of 102 page checks and the six migration-gated public-share checks" /></figure>
+                  <div class="change-arrow" aria-hidden="true">→</div>
+                  <figure><figcaption><span>After-migration rehearsal — verified preview</span><p>The exact final candidate passes all 102 checks with the matching migration. This is readiness proof, not a claim that production was changed.</p></figcaption><img src="assets/release/final-f39/web/edge-after.png" alt="Verified review environment showing all 102 checks passing after the migration rehearsal, explicitly not deployed to production" /></figure>
+                </div>
+                <div class="release-motion">
+                  <figure><figcaption>Short whole-product check preview</figcaption><img src="assets/release/final-f39/web/edge-preview.gif" alt="Short preview of the completed safe service-boundary review" /></figure>
+                  <figure><figcaption>Complete client-readable check</figcaption><video controls playsinline preload="metadata" poster="assets/release/final-f39/web/edge-after.png" src="assets/release/final-f39/web/edge-walkthrough.mp4" aria-label="Complete client-readable safe service-boundary review"></video></figure>
+                </div>
+                <div class="release-links">
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13286/saltbot-edge-audit-align-boundary-expectations-with-auth-mode" target="_blank" rel="noreferrer">View boundary follow-up <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13287/saltbot-preview-deploy-discover-and-deploy-every-edge-handler" target="_blank" rel="noreferrer">View service-discovery follow-up <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </section>
+
             <section class="release-proof-library" aria-labelledby="release-proof-title">
               <div class="release-proof-heading">
-                <p class="eyebrow dark">Visible release checks</p>
-                <h3 id="release-proof-title">See the completed checks here—no extra download or technical report needed.</h3>
-                <p>Each check explains the problem, what changed, how the member journey was repeated, and what happened. The images, previews, and recordings are visible below.</p>
+                <p class="eyebrow dark">Earlier visual proof</p>
+                <h3 id="release-proof-title">See the earlier completed journeys without opening a separate report.</h3>
+                <p>These images and recordings remain the proof for the earlier reviewed version. They are clearly kept separate from the current candidate replay above.</p>
               </div>
 
               <article class="release-proof-card" id="release-listing-launch">
@@ -188,7 +332,7 @@
                     <p class="item-kicker">Listing Launch interrupted-response check</p>
                     <h4>One bundle for one member action—even when the first response is interrupted.</h4>
                   </div>
-                  <span class="release-status"><i></i>Passed on the published review site</span>
+                  <span class="release-status"><i></i>Previously passed on the published review site</span>
                 </header>
                 <div class="release-story">
                   <div><strong>Issue</strong><p>If the first answer did not reach the page, trying again could accidentally start the same paid work twice.</p></div>
@@ -214,7 +358,7 @@
                     <p class="item-kicker">Platform Checker interrupted-response check</p>
                     <h4>An interrupted response now reopens one refined preview.</h4>
                   </div>
-                  <span class="release-status"><i></i>Passed on the published review site</span>
+                  <span class="release-status"><i></i>Previously passed on the published review site</span>
                 </header>
                 <div class="release-story">
                   <div><strong>Issue</strong><p>If the first Platform Checker answer did not reach the page, trying again could repeat the work instead of reopening the finished result.</p></div>
@@ -240,7 +384,7 @@
                     <p class="item-kicker">Additional safeguard found during the final review</p>
                     <h4>Market Intel now checks the member and usage allowance before research begins.</h4>
                   </div>
-                  <span class="release-status"><i></i>Passed on the published review site</span>
+                  <span class="release-status"><i></i>Previously passed on the published review site</span>
                 </header>
                 <div class="release-story">
                   <div><strong>Issue</strong><p>A direct Market Intel request could begin research and AI work before confirming that it came from a signed-in member with an available allowance.</p></div>
@@ -263,51 +407,51 @@
               <article class="release-proof-card ios-release-proof" id="release-iphone-current">
                 <header>
                   <div>
-                    <p class="item-kicker">Current iPhone member experience</p>
-                    <h4>The reviewed version passed the signed-in member journey and app-return checks.</h4>
+                    <p class="item-kicker">Earlier iPhone member experience</p>
+                    <h4>The earlier reviewed version passed the signed-in member journey and app-return checks.</h4>
                   </div>
-                  <span class="release-status"><i></i>Passed in Apple’s iPhone Simulator</span>
+                  <span class="release-status"><i></i>Passed in Apple’s iPhone Simulator · earlier candidate</span>
                 </header>
                 <div class="release-story">
-                  <div><strong>Issue</strong><p>The iPhone version needed its own current, signed-in check so an earlier build or web result was not mistaken for proof of the reviewed app.</p></div>
-                  <div><strong>What was prepared</strong><p>The reviewed iPhone version was rebuilt cleanly, installed with release settings, and confirmed to match the version being checked. The same version was then removed and installed again for an independent second first-launch check.</p></div>
+                  <div><strong>Issue</strong><p>The iPhone version needed its own signed-in check so a web result was not mistaken for proof of the mobile app.</p></div>
+                  <div><strong>What was prepared</strong><p>The earlier iPhone review version was rebuilt cleanly and installed with release settings. It was then removed and installed again for an independent second first-launch check.</p></div>
                   <div><strong>How it was user-tested</strong><p>Two separate clean uninstall, reinstall, and cold-launch runs each reached the usable sign-in screen without the earlier blank pause. A signed-in review member then opened the Dashboard, submitted the weekly-calendar request once, reviewed all seven saved days and one day’s details, opened Brand Studio, moved the app to the background, returned, fully closed it, and launched it again.</p></div>
                   <div><strong>Result</strong><p>The clean first-launch check passed twice. The weekly request completed on its first submission with seven complete, distinct posts across seven days. Every checked member screen loaded, the session stayed signed in, and the app returned correctly after each lifecycle step.</p></div>
                 </div>
                 <div class="release-proof-heading">
-                  <p class="eyebrow dark">Final candidate check</p>
-                  <h3>The final 1.3.0 build was rebuilt cleanly and upgrade-tested.</h3>
-                  <p>The final candidate used clean source revision f7499696. It passed the Release Simulator build, installed over the fully tested app, reopened the existing signed-in experience, and retained the member session after a cold relaunch. The changes after the complete journey were limited to live-service protections and release checks—there were no customer-facing or native iPhone file changes.</p>
+                  <p class="eyebrow dark">Earlier release-candidate check</p>
+                  <h3>The earlier 1.3.0 Simulator build was rebuilt cleanly and opened after an upgrade.</h3>
+                  <p>That earlier candidate installed over the fully reviewed app, reopened the signed-in member experience, and retained the session after a cold relaunch. This record remains visible as earlier proof; the current combined candidate is being checked separately above.</p>
                 </div>
                 <div class="release-before-after ios-cold-start">
-                  <figure><figcaption><span>Complete journey baseline</span><p>The exact calendar-recovery build retained the saved weekly Calendar after a full close and relaunch.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" alt="SaltBot iPhone retaining the saved weekly Calendar after a complete relaunch" /></figure>
+                  <figure><figcaption><span>Complete journey baseline</span><p>The earlier calendar-recovery build retained the saved weekly Calendar after a full close and relaunch.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" alt="SaltBot iPhone retaining the saved weekly Calendar after a complete relaunch" /></figure>
                   <div class="change-arrow" aria-hidden="true">→</div>
-                  <figure><figcaption><span>Final candidate result</span><p>The final Release candidate reopened the authenticated member experience after the upgrade and cold relaunch.</p></figcaption><img src="assets/release/ios/current-f7499696/screenshots/final-candidate-cold-relaunch.png" alt="Final SaltBot iPhone candidate reopened with the authenticated member experience retained" /></figure>
+                  <figure><figcaption><span>Earlier upgrade result</span><p>The earlier Release candidate reopened the signed-in member experience after the upgrade and cold relaunch.</p></figcaption><img src="assets/release/ios/current-f7499696/screenshots/final-candidate-cold-relaunch.png" alt="Earlier SaltBot iPhone candidate reopened with the signed-in member experience retained" /></figure>
                 </div>
                 <div class="ios-video-grid">
-                  <figure><figcaption><strong>Final candidate cold relaunch</strong><span>Upgrade the fully tested app, close it, and reopen the final Release candidate</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-f7499696/screenshots/final-candidate-cold-relaunch.png" src="assets/release/ios/current-f7499696/videos/final-candidate-cold-relaunch.mp4" aria-label="Final SaltBot iPhone candidate upgrade and cold-relaunch recording"></video></figure>
+                  <figure><figcaption><strong>Earlier candidate cold relaunch</strong><span>Upgrade the reviewed app, close it, and reopen the earlier Release candidate</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-f7499696/screenshots/final-candidate-cold-relaunch.png" src="assets/release/ios/current-f7499696/videos/final-candidate-cold-relaunch.mp4" aria-label="Earlier SaltBot iPhone candidate upgrade and cold-relaunch recording"></video></figure>
                 </div>
                 <div class="release-proof-heading">
-                  <p class="eyebrow dark">Latest exact-source rerun</p>
-                  <h3>The later calendar-recovery source was built and repeated independently.</h3>
-                  <p>The exact source revision 36adae64 produced a clean Release Simulator build. Two clean launches passed, one new weekly request returned seven distinct days without repeating the prior calendar, and the same calendar remained after the app was fully closed and reopened.</p>
+                  <p class="eyebrow dark">Earlier full member replay</p>
+                  <h3>The calendar and relaunch journey was repeated independently.</h3>
+                  <p>That earlier version passed two clean launches, returned a new seven-day calendar without repeating the prior one, and kept the same calendar after the app was fully closed and reopened.</p>
                 </div>
                 <div class="release-before-after ios-cold-start">
-                  <figure><figcaption><span>First exact-source clean launch</span><p>The complete branded sign-in screen appeared without an empty pause.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/clean-install-1-login.png" alt="First exact-source iPhone clean launch reaching the SaltBot sign-in screen" /></figure>
+                  <figure><figcaption><span>First clean launch</span><p>The complete branded sign-in screen appeared without an empty pause.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/clean-install-1-login.png" alt="First earlier iPhone clean launch reaching the SaltBot sign-in screen" /></figure>
                   <div class="change-arrow" aria-hidden="true">→</div>
-                  <figure><figcaption><span>Second independent clean launch</span><p>The same exact source reached the complete sign-in screen again.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/clean-install-2-login.png" alt="Second exact-source iPhone clean launch reaching the SaltBot sign-in screen" /></figure>
+                  <figure><figcaption><span>Second independent clean launch</span><p>The same earlier version reached the complete sign-in screen again.</p></figcaption><img src="assets/release/ios/current-36adae64/screenshots/clean-install-2-login.png" alt="Second earlier iPhone clean launch reaching the SaltBot sign-in screen" /></figure>
                 </div>
-                <div class="ios-screenshot-grid" aria-label="Latest exact-source iPhone result screenshots">
-                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-authenticated-dashboard.png" alt="Exact-source SaltBot iPhone after review-member sign-in" /><figcaption>Signed-in app</figcaption></figure>
-                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-weekly-first-attempt-submitted.png" alt="Exact-source SaltBot iPhone with the weekly request submitted once" /><figcaption>One submission</figcaption></figure>
-                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-weekly-calendar-overview.png" alt="Exact-source SaltBot iPhone showing seven posts across one week and seven days" /><figcaption>7 posts · 1 week · 7 days</figcaption></figure>
-                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" alt="Exact-source SaltBot iPhone retaining the weekly calendar after full relaunch" /><figcaption>Calendar retained</figcaption></figure>
+                <div class="ios-screenshot-grid" aria-label="Earlier iPhone result screenshots">
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-authenticated-dashboard.png" alt="Earlier SaltBot iPhone after review-member sign-in" /><figcaption>Signed-in app</figcaption></figure>
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-weekly-first-attempt-submitted.png" alt="Earlier SaltBot iPhone with the weekly request submitted once" /><figcaption>One submission</figcaption></figure>
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-weekly-calendar-overview.png" alt="Earlier SaltBot iPhone showing seven posts across one week and seven days" /><figcaption>7 posts · 1 week · 7 days</figcaption></figure>
+                  <figure><img src="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" alt="Earlier SaltBot iPhone retaining the weekly calendar after full relaunch" /><figcaption>Calendar retained</figcaption></figure>
                 </div>
                 <div class="ios-video-grid">
-                  <figure><figcaption><strong>Exact-source clean launch 1</strong><span>Remove, install, and cold-launch the exact Release build</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/clean-install-1-login.png" src="assets/release/ios/current-36adae64/videos/clean-install-1-cold-launch.mp4" aria-label="First exact-source clean iPhone launch"></video></figure>
-                  <figure><figcaption><strong>Exact-source clean launch 2</strong><span>Repeat the independent remove, install, and cold launch</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/clean-install-2-login.png" src="assets/release/ios/current-36adae64/videos/clean-install-2-cold-launch.mp4" aria-label="Second exact-source clean iPhone launch"></video></figure>
-                  <figure><figcaption><strong>One weekly-calendar submission</strong><span>Continuous request and wait, followed by the complete saved result</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/36ada-weekly-calendar-overview.png" src="assets/release/ios/current-36adae64/videos/36ada-weekly-calendar-single-attempt.mp4" aria-label="Exact-source one-attempt weekly-calendar walkthrough"></video></figure>
-                  <figure><figcaption><strong>Full close and relaunch</strong><span>Close the app completely, reopen it, and retain the same calendar</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" src="assets/release/ios/current-36adae64/videos/36ada-terminated-relaunch-session-calendar-final.mp4" aria-label="Exact-source iPhone terminate and relaunch walkthrough"></video></figure>
+                  <figure><figcaption><strong>Earlier clean launch 1</strong><span>Remove, install, and cold-launch the reviewed Release build</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/clean-install-1-login.png" src="assets/release/ios/current-36adae64/videos/clean-install-1-cold-launch.mp4" aria-label="First earlier clean iPhone launch"></video></figure>
+                  <figure><figcaption><strong>Earlier clean launch 2</strong><span>Repeat the independent remove, install, and cold launch</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/clean-install-2-login.png" src="assets/release/ios/current-36adae64/videos/clean-install-2-cold-launch.mp4" aria-label="Second earlier clean iPhone launch"></video></figure>
+                  <figure><figcaption><strong>One weekly-calendar submission</strong><span>Continuous request and wait, followed by the complete saved result</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/36ada-weekly-calendar-overview.png" src="assets/release/ios/current-36adae64/videos/36ada-weekly-calendar-single-attempt.mp4" aria-label="Earlier one-attempt weekly-calendar walkthrough"></video></figure>
+                  <figure><figcaption><strong>Full close and relaunch</strong><span>Close the app completely, reopen it, and retain the same calendar</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-36adae64/screenshots/36ada-terminated-relaunch-calendar-retained.png" src="assets/release/ios/current-36adae64/videos/36ada-terminated-relaunch-session-calendar-final.mp4" aria-label="Earlier iPhone terminate and relaunch walkthrough"></video></figure>
                 </div>
                 <div class="release-before-after ios-cold-start">
                   <figure><figcaption><span>What Tina experienced</span><p>A fresh first launch could pause on an empty screen before sign-in became usable.</p></figcaption><img src="assets/release/ios/before-cold-start.png" alt="Earlier iPhone first launch showing the empty pause before sign-in" /></figure>
@@ -345,10 +489,10 @@
                   <figure><figcaption><strong>Full close and relaunch</strong><span>Close the app completely, reopen it, and retain the session</span></figcaption><video controls playsinline preload="metadata" poster="assets/release/ios/current-ba97fa63/screenshots/terminated-relaunch-session-retained.png" src="assets/release/ios/current-ba97fa63/terminate-and-relaunch.mp4" aria-label="Current iPhone full-close and relaunch walkthrough"></video></figure>
                 </div>
                 <aside class="release-truth">
-                  <strong>What this proof does—and does not—confirm</strong>
-                  <p>This confirms the current authenticated member journey in Apple’s iPhone Simulator. It is not a signed App Store package, a physical-device result, a TestFlight delivery, or a public App Store release.</p>
+                  <strong>What this earlier proof does—and does not—confirm</strong>
+                  <p>This confirms the earlier authenticated member journey in Apple’s iPhone Simulator. It is not a signed App Store package, a physical-device result, a TestFlight delivery, or a public App Store release, and it does not replace the current candidate replay.</p>
                 </aside>
-                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13088/saltbot-ios-fix-first-install-cold-launch-blank-screen-before-first" target="_blank" rel="noreferrer">View the current iPhone follow-up <span aria-hidden="true">↗</span></a>
+                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13088/saltbot-ios-fix-first-install-cold-launch-blank-screen-before-first" target="_blank" rel="noreferrer">View the earlier iPhone follow-up <span aria-hidden="true">↗</span></a>
               </article>
 
             </section>
@@ -400,7 +544,7 @@
           <div>
             <p class="eyebrow dark">Original feedback</p>
             <h2 id="source-title">Both source documents stay connected to the work.</h2>
-            <p>Tina’s original review and newest follow-up remain the reference. Every point links to its individual Linear task and a durable address on this page.</p>
+            <p>Tina’s original review and newest follow-up remain the reference. Every point links to its individual Linear task and its own permanent section on this page.</p>
             <div class="source-links">
               <a id="source-doc" class="primary-link" href="#" target="_blank" rel="noreferrer">Open the original feedback <span aria-hidden="true">↗</span></a>
               <a id="newest-source-doc" class="primary-link secondary" href="#" target="_blank" rel="noreferrer">Open the newest follow-up <span aria-hidden="true">↗</span></a>
@@ -417,7 +561,7 @@
     <footer>
       <img src="assets/brand/salt-logo-expanded.png" alt="Salt" />
       <p>SaltBot · Tina’s feedback · User-checked results</p>
-      <p>Plain English. Adjacent visuals. Completed proof and remaining release gates kept separate.</p>
+      <p>Plain English. Large inline visuals. Earlier proof, the current review, and remaining release steps kept separate.</p>
     </footer>
 
     <dialog id="image-dialog" aria-labelledby="dialog-caption">

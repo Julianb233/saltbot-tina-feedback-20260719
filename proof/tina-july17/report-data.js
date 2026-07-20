@@ -1,6 +1,6 @@
 window.SALT_REPORT = {
   "readyForReview": true,
-  "updated": "July 19, 2026",
+  "updated": "July 20, 2026",
   "sourceDocUrl": "https://docs.google.com/document/d/11xHUbS85NZxVTeAHOGDcVHmxp6fwzc1aHpkpsqcf8Dk/edit?usp=sharing",
   "followupSourceDocUrl": "https://docs.google.com/document/d/176A894SeWt9TVa-YYt0JAuBB7qtWPnA1CNytS3dX9Ec/edit?usp=sharing",
   "parentTask": "AI-13015",
@@ -1372,8 +1372,22 @@ window.SALT_REPORT = {
   "iosEnvironment": "Apple iPhone Simulator",
   "iosFullJourneyRevision": "36adae641e551262421917896d4f786458043ca8",
   "iosFullJourneyTestedAt": "2026-07-19T22:06:00.000Z",
-  "iosFinalCandidateRevision": "f7499696ba0edd39186355d0b23cdf70ad2ca6f4",
-  "iosFinalCandidateTestedAt": "2026-07-19T23:45:00.000Z",
-  "iosCurrentSourceRevision": "f7499696ba0edd39186355d0b23cdf70ad2ca6f4",
-  "iosCurrentSourceTestedAt": "2026-07-19T23:45:00.000Z"
+  "iosFinalCandidateRevision": "f39d6972234e772653742cffed472c5e0d2657be",
+  "iosFinalCandidateTestedAt": "2026-07-20T09:52:00.000Z",
+  "iosCurrentSourceRevision": "f39d6972234e772653742cffed472c5e0d2657be",
+  "iosCurrentSourceTestedAt": "2026-07-20T09:52:00.000Z",
+  "finalCandidate": {
+    "revision": "f39d6972234e772653742cffed472c5e0d2657be",
+    "testedAt": "2026-07-20T09:52:00.000Z",
+    "automatedTestFiles": 297,
+    "repeatedAutomatedRuns": 2,
+    "exactEdgeBoundaryChecks": 43,
+    "deployedSafeBoundaryChecks": 102,
+    "publicSharePages": 6,
+    "brandContrastSamples": 48,
+    "iosEnvironment": "Apple iPhone 17 Pro Simulator, iOS 26.5",
+    "productionReleased": false,
+    "testFlightReleased": false,
+    "physicalDeviceTested": false
+  }
 };

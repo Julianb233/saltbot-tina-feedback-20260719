@@ -21,7 +21,7 @@
   ];
   const expectedIosRevision = "ba97fa63d2764df53ee8ad5ad3aa0d87f6b406dc";
   const expectedIosFullJourneyRevision = "36adae641e551262421917896d4f786458043ca8";
-  const expectedIosFinalCandidateRevision = "f7499696ba0edd39186355d0b23cdf70ad2ca6f4";
+  const expectedIosFinalCandidateRevision = "f39d6972234e772653742cffed472c5e0d2657be";
 
   const escapeHtml = (value = "") => String(value)
     .replaceAll("&", "&amp;")
@@ -70,11 +70,16 @@
     const errors = [];
     const itemIds = report.items.map((item) => item.id);
     if (report.readyForReview !== true) errors.push("The report has not been approved for client review.");
-    if (report.updated !== "July 19, 2026") errors.push("The report date is not current.");
+    if (report.updated !== "July 20, 2026") errors.push("The report date is not current.");
     if (report.iosTestedRevision !== expectedIosRevision) errors.push("The current iPhone review version is not identified.");
     if (report.iosFullJourneyRevision !== expectedIosFullJourneyRevision) errors.push("The complete iPhone member journey is not identified.");
     if (report.iosFinalCandidateRevision !== expectedIosFinalCandidateRevision) errors.push("The final iPhone candidate is not identified.");
     if (report.iosCurrentSourceRevision !== expectedIosFinalCandidateRevision) errors.push("The current iPhone source does not match the final candidate.");
+    if (report.finalCandidate?.revision !== expectedIosFinalCandidateRevision) errors.push("The whole-product review does not match the final candidate.");
+    if (report.finalCandidate?.automatedTestFiles !== 297 || report.finalCandidate?.repeatedAutomatedRuns !== 2) errors.push("The repeated final automated review is incomplete.");
+    if (report.finalCandidate?.exactEdgeBoundaryChecks !== 43 || report.finalCandidate?.deployedSafeBoundaryChecks !== 102) errors.push("The final safe service-boundary review is incomplete.");
+    if (report.finalCandidate?.publicSharePages !== 6 || report.finalCandidate?.brandContrastSamples !== 48) errors.push("The final public-sharing review is incomplete.");
+    if (report.finalCandidate?.productionReleased !== false || report.finalCandidate?.testFlightReleased !== false || report.finalCandidate?.physicalDeviceTested !== false) errors.push("The final release boundaries are not stated accurately.");
     if (itemIds.length !== expectedIds.length || itemIds.some((id, index) => id !== expectedIds[index])) {
       errors.push("The feedback inventory is incomplete or out of order.");
     }
@@ -211,15 +216,16 @@
   function mediaPanel(item, side, labels = {}) {
     const isBefore = side === "before";
     const src = isBefore ? item.beforeImage : item.afterImage;
-    const heading = isBefore
-      ? (labels.before || "What Tina reported")
-      : (labels.after || "What the user check showed");
+    const headingDetail = isBefore
+      ? (labels.before || "what Tina reported")
+      : (labels.after || "what the member check showed");
+    const heading = `${isBefore ? "Before" : "After"} — ${headingDetail}`;
     const caption = isBefore ? item.issue : item.result;
     return `<figure class="media-panel ${side}" data-proof-id="${escapeHtml(item.id)}">
       <figcaption><span>${heading}</span><p>${copy(caption)}</p></figcaption>
       <button type="button" data-image="${escapeHtml(src)}" data-caption="${copy(caption)}" aria-label="${heading}: ${copy(caption)}. Open an optional larger view.">
         <img src="${escapeHtml(src)}" alt="${copy(caption)}" loading="lazy" decoding="async" />
-        <em>Open larger view <span aria-hidden="true">↗</span></em>
+        <em>Optional: open larger view <span aria-hidden="true">↗</span></em>
       </button>
     </figure>`;
   }
@@ -307,16 +313,16 @@
       </section>
       <section class="user-path"><div><span>What was checked</span><small>Reviewed ${copy(completedAt(item.testedAt))}</small></div>${stepsBlock(item)}</section>
       <div class="before-after">
-        ${mediaPanel(item, "before", { before: "What Tina experienced", after: afterLabel })}
+        ${mediaPanel(item, "before", { before: "what Tina experienced", after: afterLabel.toLowerCase() })}
         <div class="change-arrow" aria-hidden="true">→</div>
-        ${mediaPanel(item, "after", { before: "What Tina experienced", after: afterLabel })}
+        ${mediaPanel(item, "after", { before: "what Tina experienced", after: afterLabel.toLowerCase() })}
       </div>
       ${recordingBlock(item, recordingPresentation)}
       ${relatedProof}
       ${boundary}
       <details class="test-note"><summary>About this review record</summary><p>${copy(item.cleanup)}</p></details>
       <footer class="evidence-links">
-        <p><strong>Account boundary</strong><span>${copy(item.accountBoundary)}</span></p>
+        <p><strong>Account used for this check</strong><span>${copy(item.accountBoundary)}</span></p>
         <a href="${escapeHtml(item.proofUrl)}">Open this exact item <span aria-hidden="true">↗</span></a>
         <a href="${taskUrl(item.linearIssue)}" target="_blank" rel="noreferrer">View ${escapeHtml(item.linearIssue)} <span aria-hidden="true">↗</span></a>
       </footer>
@@ -356,7 +362,7 @@
       ? "Private SaltBot result"
       : item.outcome === "protected"
         ? "Safeguarded result"
-        : "What the user check showed";
+        : "what the member check showed";
     const recordingPresentation = needsApproval
       ? {
         label: "Private scheduling record",
