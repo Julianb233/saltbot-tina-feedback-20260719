@@ -188,6 +188,7 @@ button{font:inherit}
 .release-proof-card>header{display:flex;justify-content:space-between;gap:26px;align-items:flex-start}
 .release-proof-card h4{max-width:900px;margin:0;font-family:var(--display);font-size:clamp(2.35rem,3.8vw,4rem);font-weight:400;line-height:1.02;letter-spacing:-.02em}
 .release-proof-card .release-status{flex:0 0 auto;background:var(--green-pale);color:var(--green);white-space:nowrap}
+.release-proof-card .release-status.attention{background:var(--amber-pale);color:#7a4a06}
 .release-story{display:grid;grid-template-columns:1fr 1fr;margin-top:34px;border:1px solid var(--line);background:var(--line);gap:1px}
 .release-story>div{min-height:160px;padding:22px 24px;background:var(--paper)}
 .release-story strong{display:block;margin-bottom:8px;color:var(--rose);font-size:.69rem;text-transform:uppercase;letter-spacing:.11em}

@@ -118,30 +118,32 @@
             <div class="release-heading">
               <div>
                 <p class="eyebrow dark">Whole-product review</p>
-                <h2 id="release-readiness-title">What passed on the final candidate—and what still needs release approval.</h2>
+                <h2 id="release-readiness-title">What passed—and what the latest checks found before release.</h2>
               </div>
               <p>This section keeps earlier evidence from being mistaken for proof of the newer combined candidate. Web, iPhone, outside services, and public release each have their own finish line.</p>
             </div>
 
-            <aside class="current-review-banner passed" role="status">
-              <div><span>Current status</span><strong>The combined web and iPhone Simulator candidate passed its review.</strong></div>
-              <p>The final candidate was rebuilt from its exact saved version, checked twice through all 297 automated tests, opened across desktop and phone-sized web screens, and installed in Apple’s iPhone Simulator. Its newest before-and-after images and complete recordings are visible immediately below.</p>
+            <aside class="current-review-banner" role="status">
+              <div><span>Current status</span><strong>The engineering checks passed, and two newly found gaps remain open before release.</strong></div>
+              <p>The latest combined candidate passed both 298-test runs, the web and service checks, the native build, installation, and two iPhone Simulator cold launches. Those checks also found a slow first fresh launch and a Self Clone privacy conflict. Both have their own follow-up task and are not being presented as completed.</p>
             </aside>
 
             <div class="release-grid whole-product-grid">
-              <article class="release-card" data-tone="passed">
-                <span class="release-status"><i></i>Current candidate · reviewed and passed</span>
+              <article class="release-card" data-tone="review">
+                <span class="release-status"><i></i>Latest candidate · engineering checks passed, two gaps open</span>
                 <h3>Current web and iPhone Simulator candidate</h3>
-                <p>The newest corrections were repeated from a member’s point of view on the exact combined candidate.</p>
+                <p>The latest gap-closure candidate was rebuilt and checked from its exact saved version.</p>
                 <ul>
-                  <li>All 297 automated tests passed twice, followed by the production build, type, style, and release-workflow checks.</li>
-                  <li>The final web build passed 102 of 102 page-and-screen checks against the review backend. Against today’s production backend it passed 96 of 102; only the three new public-share pages at desktop and phone widths are waiting for the matching privacy update.</li>
+                  <li>All 298 automated tests passed twice, followed by the production build, type, style, and release-workflow checks.</li>
+                  <li>All 77 service handlers passed their frozen checks, all 15 service tests passed, and the current public service boundary replay passed 91 of 91 safe cases.</li>
+                  <li>The final web build passed 102 of 102 page-and-screen checks in the review environment. Against the public app’s current services it passed 96 of 102; only the three new public-share pages at desktop and phone widths are waiting for the matching privacy update.</li>
                   <li>The public brand, asset, and conversation pages opened without a signed-in session on desktop and phone-sized screens.</li>
                   <li>Brand Studio opened its real public page from the iPhone app in one tap and returned to the same signed-in screen.</li>
                   <li>The admin menu opened below the iPhone safe area, stayed within the screen, copied the public SaltBot address, and closed normally.</li>
-                  <li>Each newly found issue received its own Linear task; one optional member-navigation Share shortcut remains a separate product decision.</li>
+                  <li>The newest iPhone build installed and cold-launched twice, but the fresh install stayed on the branded splash for about 20 seconds before the first screen appeared.</li>
+                  <li>A privacy review found that Self Clone’s private-image promise does not match one public storage copy; no real person’s likeness will be tested until that is corrected.</li>
                 </ul>
-                <p class="release-callout"><strong>What this means today:</strong> the review candidate is ready for Tina’s decision. This is Simulator and review-environment proof—not a claim that production or TestFlight has already been updated.</p>
+                <p class="release-callout"><strong>What this means today:</strong> the engineering base is stable, but the newly found iPhone-startup and likeness-privacy gaps must be resolved before this can be described as release-ready. This is still Simulator and review-environment proof—not a claim that production or TestFlight has been updated.</p>
               </article>
 
               <article class="release-card" data-tone="passed">
@@ -175,6 +177,7 @@
                   <li>Tina’s Approve button records her decision, but it does not yet send the iPhone update to TestFlight or the App Store.</li>
                   <li>A backup AI service account needs its balance restored; the working fallback handled the tested request.</li>
                   <li>A safe test of the anonymous daily allowance could not target the same anonymous visitor through the public gateway. The allowance is not proven broken, but this one live confirmation remains open.</li>
+                  <li>The fresh-install iPhone launch delay and Self Clone privacy conflict found in the latest review must be corrected and retested.</li>
                 </ul>
                 <div class="release-links" aria-label="Release follow-up tasks">
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13076/saltbot-release-authenticate-tina-approval-and-persist-immutable" target="_blank" rel="noreferrer">Connect the exact approval <span aria-hidden="true">↗</span></a>
@@ -186,6 +189,9 @@
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13193/saltbot-restore-openrouter-and-openai-provider-credit-headroom" target="_blank" rel="noreferrer">Restore backup service capacity <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13092/saltbot-edge-atomically-meter-anonymous-and-signed-in-paid-generation" target="_blank" rel="noreferrer">Finish the anonymous allowance proof <span aria-hidden="true">↗</span></a>
                   <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13293/saltbot-product-decision-offer-share-saltbot-in-ordinary-member" target="_blank" rel="noreferrer">Decide whether members need a general Share shortcut <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13312/saltbot-ios-qa-reduce-fresh-install-cold-launch-splash-delay" target="_blank" rel="noreferrer">Resolve the fresh-install launch delay <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13314/saltbot-self-clone-keep-generated-likeness-images-private-end-to-end" target="_blank" rel="noreferrer">Keep Self Clone images private <span aria-hidden="true">↗</span></a>
+                  <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13313/saltbot-release-proof-use-the-stable-tina-report-host-in-edge" target="_blank" rel="noreferrer">Bind release proof to this stable report <span aria-hidden="true">↗</span></a>
                 </div>
               </article>
             </div>
@@ -196,7 +202,7 @@
               <strong>Earlier iPhone proof</strong>
               <p><strong>Passed in Apple’s iPhone Simulator</strong> on the earlier reviewed version. This was not a signed App Store package, a physical-device result, a TestFlight delivery, or a public App Store release.</p>
               <strong>Current candidate</strong>
-              <p>The exact combined candidate passed its automated, desktop, phone-sized web, safe service-boundary, and Apple iPhone Simulator checks. Its newest visual proof is shown below. Production publishing, physical-device testing, and TestFlight remain separate approval steps.</p>
+              <p>The exact combined candidate passed its automated, desktop, phone-sized web, safe service-boundary, native build, and Apple iPhone Simulator checks. Those checks also exposed two release gaps instead of hiding them: slow first-launch behavior and a Self Clone privacy conflict. Production publishing, physical-device testing, and TestFlight remain separate approval steps.</p>
             </aside>
 
             <nav class="release-proof-jumps" aria-label="Jump to release proof">
@@ -205,6 +211,7 @@
               <a href="#release-native-share">iPhone public sharing</a>
               <a href="#release-admin-menu">Phone menu and safe area</a>
               <a href="#release-edge">Service and recovery checks</a>
+              <a href="#release-ios-launch-latency">Fresh-install iPhone check</a>
               <a href="#latest-follow-up">Latest 13 points</a>
               <a href="#release-listing-launch">Listing Launch</a>
               <a href="#release-market-fit">Market Fit</a>
@@ -215,10 +222,38 @@
 
             <section class="release-proof-library current-proof-library" aria-labelledby="current-release-proof-title">
               <div class="release-proof-heading">
-                <p class="eyebrow dark">Final-candidate visual proof</p>
-                <h3 id="current-release-proof-title">The newest issues sit directly beside their corrected result.</h3>
+                <p class="eyebrow dark">Current visual proof</p>
+                <h3 id="current-release-proof-title">Completed corrections and newly found gaps are shown honestly.</h3>
                 <p>Every image is shown at full width on the page. The short preview and full recording are immediately underneath, so nothing has to be opened just to see whether a result exists.</p>
               </div>
+
+              <article class="release-proof-card" id="release-ios-launch-latency">
+                <header>
+                  <div>
+                    <p class="item-kicker">Fresh-install iPhone launch</p>
+                    <h4>The app opens, but the first fresh launch can keep a member waiting too long.</h4>
+                  </div>
+                  <span class="release-status attention"><i></i>New gap · AI-13312</span>
+                </header>
+                <div class="release-story">
+                  <div><strong>Issue</strong><p>On a fresh iPhone Simulator install, the Salt splash remained visible for roughly 20 seconds before the Welcome Back screen appeared.</p></div>
+                  <div><strong>What we checked</strong><p>The exact current iPhone build was installed into a new Simulator and cold-launched twice. The first and second launch were each recorded from start to finish.</p></div>
+                  <div><strong>What the comparison shows</strong><p>The second cold launch reached Welcome Back in roughly six seconds, which points to extra first-run loading rather than an app crash.</p></div>
+                  <div><strong>Result</strong><p>The app eventually opens, but this is not an after-fix result. The wait is tracked for correction and another fresh-install test before release.</p></div>
+                </div>
+                <div class="release-before-after ios-cold-start">
+                  <figure><figcaption><span>Fresh install — gap observed</span><p>The branded splash was still visible after eight seconds.</p></figcaption><img src="assets/release/final-b381/ios/fresh-install-eight-seconds.png" alt="Fresh-install iPhone Simulator still showing the Salt splash after eight seconds" /></figure>
+                  <div class="change-arrow" aria-hidden="true">→</div>
+                  <figure><figcaption><span>Second cold launch — comparison</span><p>The Welcome Back screen appeared on the quicker follow-up launch.</p></figcaption><img src="assets/release/final-b381/ios/second-launch-ready.png" alt="Second iPhone Simulator cold launch showing the complete Welcome Back screen" /></figure>
+                </div>
+                <div class="release-motion portrait-motion">
+                  <figure><figcaption>Fresh-install short preview</figcaption><img src="assets/release/final-b381/ios/fresh-install-preview.gif" alt="Short preview of the slow fresh-install iPhone launch" /></figure>
+                  <figure><figcaption>Complete fresh-install recording</figcaption><video controls playsinline preload="metadata" poster="assets/release/final-b381/ios/fresh-install-eight-seconds.png" src="assets/release/final-b381/ios/fresh-install-cold-launch.mp4" aria-label="Complete recording of the fresh-install iPhone Simulator cold launch"></video></figure>
+                  <figure><figcaption>Second-launch short preview</figcaption><img src="assets/release/final-b381/ios/second-launch-preview.gif" alt="Short preview of the quicker second iPhone cold launch" /></figure>
+                  <figure><figcaption>Complete second-launch recording</figcaption><video controls playsinline preload="metadata" poster="assets/release/final-b381/ios/second-launch-ready.png" src="assets/release/final-b381/ios/second-cold-launch.mp4" aria-label="Complete recording of the second iPhone Simulator cold launch"></video></figure>
+                </div>
+                <a class="release-link" href="https://linear.app/ai-acrobatics/issue/AI-13312/saltbot-ios-qa-reduce-fresh-install-cold-launch-splash-delay" target="_blank" rel="noreferrer">View the individual follow-up <span aria-hidden="true">↗</span></a>
+              </article>
 
               <article class="release-proof-card" id="release-brand-contrast">
                 <header>
@@ -309,8 +344,8 @@
                 <div class="release-story">
                   <div><strong>Issue</strong><p>Some service checks could miss an unlisted function or count an expected signed-out response as a failure. A stale review setting could stop the test early, and production does not yet have the three new privacy-protected public-share reads.</p></div>
                   <div><strong>What changed</strong><p>The review now discovers every service handler automatically, applies the correct expectation to each one, and uses the same valid public connection identity as the final build. The three public-share reads and their protected migration passed in the review environment and remain held from production until approved.</p></div>
-                  <div><strong>How it was user-tested</strong><p>All 43 exact-candidate sign-in, missing-information, not-found, and repeat-request boundaries passed across the 11 services closest to Tina’s feedback. The deployed review environment also passed 102 safe account, request, and usage-boundary checks across 18 service actions whose service source is unchanged in the final candidate. Separately, the exact web build passed 102 of 102 review-backend page checks and 96 of 102 against today’s production backend.</p></div>
-                  <div><strong>Result</strong><p>Expected mistakes return controlled guidance instead of an uncontrolled error, repeated work remains bounded, and the review connection now answers normally. The six production-backend page checks that remain are the same three new public-share pages at desktop and phone widths; they are waiting for the protected privacy update and are not being presented as live. Paid outside services, client publishing, and microphone transcription were intentionally not triggered.</p></div>
+                  <div><strong>How it was user-tested</strong><p>All 43 exact-candidate sign-in, missing-information, not-found, and repeat-request boundaries passed across the 11 services closest to Tina’s feedback. The deployed review environment also passed 102 safe account, request, and usage-boundary checks across 18 service actions whose service source is unchanged in the final candidate. Separately, the exact web build passed 102 of 102 page checks in the review environment and 96 of 102 against the public app’s current services.</p></div>
+                  <div><strong>Result</strong><p>Expected mistakes return controlled guidance instead of an uncontrolled error, repeated work remains bounded, and the review connection now answers normally. The six public-app page checks that remain are the same three new public-share pages at desktop and phone widths; they are waiting for the protected privacy update and are not being presented as live. Paid outside services, client publishing, and microphone transcription were intentionally not triggered.</p></div>
                 </div>
                 <div class="release-before-after">
                   <figure><figcaption><span>Before rollout — current production</span><p>All other page checks pass twice; the same three public-share pages at desktop and phone widths are waiting for the database migration.</p></figcaption><img src="assets/release/final-f39/web/edge-before.png" alt="Current production whole-product check showing 96 of 102 page checks and the six migration-gated public-share checks" /></figure>
