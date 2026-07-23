@@ -49,7 +49,7 @@ button{font:inherit}
 .brand-link img{width:142px;height:auto}
 .site-header nav{display:flex;min-width:0;flex:1 1 auto;align-items:center;gap:4px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none}
 .site-header nav::-webkit-scrollbar{display:none}
-.site-header nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:999px;font-size:.74rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;transition:background-color .18s,color .18s}
+.site-header nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;border-radius:999px;font-size:.74rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;transition:background-color .18s,color .18s}
 .site-header nav a:hover{background:var(--amber-pale)}
 .site-header nav a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 .site-header nav a[aria-current=location]{background:var(--ink);color:var(--white)}
@@ -78,6 +78,8 @@ button{font:inherit}
 .audience i{width:4px;height:4px;border-radius:50%;background:var(--amber)}
 
 .access-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:#f1ece6}
+.recovery-link-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:var(--paper-deep)}
+.ios-answer-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:#f1ece6}
 .access-heading{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:24px 64px;align-items:end}
 .access-heading .eyebrow{grid-column:1/-1;margin-bottom:0}
 .access-heading h2{max-width:930px;margin:0;font-family:var(--display);font-size:clamp(3rem,5vw,5.2rem);font-weight:400;line-height:1.02;letter-spacing:-.025em}
@@ -114,6 +116,7 @@ button{font:inherit}
 .access-user-checks li+li{margin-top:10px}
 .access-motion-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
 .access-motion-grid>article{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-width:0;padding:24px;background:var(--charcoal);color:var(--white)}
+.access-motion-grid>article.wide-recording{grid-column:1/-1}
 .access-motion-grid>article>div{grid-column:1/-1}
 .access-motion-grid h3{margin:0;font-family:var(--display);font-size:2.4rem;font-weight:400;line-height:1.03}
 .access-motion-grid>article>div>p:last-child{margin:12px 0 0;color:#d8d0c8}
@@ -124,6 +127,9 @@ button{font:inherit}
 .access-motion-grid video{align-self:end;margin-top:28px}
 .access-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .access-links .primary-link{justify-content:center}
+.recovery-live-note{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;margin-top:24px;padding:24px 28px;border-left:4px solid var(--green);background:var(--green-pale)}
+.recovery-live-note strong{font-family:var(--display);font-size:1.35rem;font-weight:400}
+.recovery-live-note p{margin:0;color:#3f4e3b}
 
 .summary{padding:112px 0 104px}
 .section-intro{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:70px;align-items:end}
@@ -526,6 +532,8 @@ dialog p{margin:0;padding:16px 20px;color:#e6ded6}
   .audience{gap:9px;font-size:.68rem;letter-spacing:.08em}
   .summary{padding:82px 0}
   .access-update{padding:82px 0 88px;scroll-margin-top:112px}
+  .recovery-link-update{padding:82px 0 88px;scroll-margin-top:112px}
+  .ios-answer-update{padding:82px 0 88px;scroll-margin-top:112px}
   .access-status-grid{grid-template-columns:1fr}
   .access-status-grid article{min-height:0;padding:21px}
   .access-audit-note{grid-template-columns:1fr;gap:8px;padding:21px}
@@ -541,6 +549,7 @@ dialog p{margin:0;padding:16px 20px;color:#e6ded6}
   .access-motion-grid h3{font-size:2rem}
   .access-motion-grid video{margin-top:0}
   .access-links{display:grid}
+  .recovery-live-note{grid-template-columns:1fr;gap:8px;padding:21px}
   .latest-follow-up{padding:82px 0 88px;scroll-margin-top:112px}
   .summary-counts{grid-template-columns:1fr 1fr}
   #summary .summary-counts{grid-template-columns:1fr 1fr}

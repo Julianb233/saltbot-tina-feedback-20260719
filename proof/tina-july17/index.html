@@ -21,11 +21,13 @@
       </a>
       <nav aria-label="Report sections">
         <a href="#summary">Overview</a>
-        <a class="priority-link" href="#access-update">Access fix</a>
-        <a href="#latest-follow-up">Newest 13</a>
-        <a href="#release-readiness">Product check</a>
+        <a class="priority-link" href="#access-update">Access</a>
+        <a class="priority-link" href="#recovery-link-update">Link fix</a>
+        <a class="priority-link" href="#ios-answer-update">Answer</a>
+        <a href="#latest-follow-up">13 items</a>
+        <a href="#release-readiness">Product</a>
         <a href="#item-index">52 issues</a>
-        <a href="../tina-july15/index.html">Earlier 35</a>
+        <a href="../tina-july15/index.html">Earlier</a>
         <a href="#method">Testing</a>
         <a href="#proof">Proof</a>
         <a href="#source">Source</a>
@@ -85,7 +87,7 @@
 
             <aside class="access-audit-note">
               <strong>We checked beyond one account.</strong>
-              <p>The same imported-account pattern was reviewed across the customer list. SaltBot now requires verified membership information instead of treating an unresolved import placeholder as a confirmed Blueprint subscription. That protects other customers with the same pattern without making blanket changes to legitimate purchase history.</p>
+              <p>The same imported-account pattern was reviewed across the customer list. SaltBot now requires verified membership information instead of treating an incomplete imported record as a confirmed Blueprint subscription. That protects other customers with the same pattern without making blanket changes to legitimate purchase history.</p>
             </aside>
 
             <article class="access-proof-card" aria-labelledby="access-proof-title">
@@ -188,6 +190,236 @@
 
             <div class="access-links">
               <a class="primary-link secondary" href="https://linear.app/ai-acrobatics/issue/AI-13470/tina-jul-23-fix-paige-false-blueprint-expiry-audit-affected-users-and" target="_blank" rel="noreferrer">View the tracked follow-up <span aria-hidden="true">↗</span></a>
+              <a class="primary-link" href="#release-readiness">Continue to the whole-product review</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="recovery-link-update" id="recovery-link-update" aria-labelledby="recovery-link-update-title">
+          <div class="report-width">
+            <div class="access-heading">
+              <div>
+                <p class="eyebrow dark">Latest recovery-link follow-up</p>
+                <h2 id="recovery-link-update-title">Recovery links now wait for the member before they are used.</h2>
+              </div>
+              <p>Esteban reported that an emailed recovery link appeared expired immediately. We recreated the failure and corrected both outcomes: simply opening or previewing the email no longer uses the one-time link, and an already-used link now gives the member a clear way to try again.</p>
+            </div>
+
+            <div class="access-status-grid" aria-label="Recovery-link correction results">
+              <article>
+                <span>Email preview</span>
+                <strong>Does not use the reset link</strong>
+              </article>
+              <article>
+                <span>Member confirmation</span>
+                <strong>Waits for “Continue Securely”</strong>
+              </article>
+              <article>
+                <span>Used or expired link</span>
+                <strong>Clear retry and team help</strong>
+              </article>
+              <article>
+                <span>Shared impact</span>
+                <strong>Broader recovery path reviewed</strong>
+              </article>
+            </div>
+
+            <aside class="access-audit-note">
+              <strong>This could affect more than one member.</strong>
+              <p>In the past 30 days, 10 members requested password recovery and two completed a password change. Eight had no observed completion. That does not prove every person saw the same screen, but it showed that other members could be affected and that this needed a shared recovery correction.</p>
+            </aside>
+
+            <article class="access-proof-card" aria-labelledby="recovery-proof-title">
+              <header>
+                <div>
+                  <p class="item-kicker">Before and after</p>
+                  <h3 id="recovery-proof-title">A dead-end landing page is replaced with a useful recovery next step.</h3>
+                </div>
+                <span class="access-passed"><i></i>Updated and user-tested</span>
+              </header>
+
+              <div class="access-before-after">
+                <figure>
+                  <figcaption>
+                    <span>Before — no useful next step</span>
+                    <p>A recovery link that had already been consumed—including by an email security scanner—did not reach password reset and silently dropped the member on the generic SaltBot landing page.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13473/before-reused-recovery-link.png" alt="Before view showing an already-used recovery link silently returning to the generic SaltBot landing page" />
+                </figure>
+                <div class="change-arrow" aria-hidden="true">→</div>
+                <figure>
+                  <figcaption>
+                    <span>After — clear retry and help</span>
+                    <p>An already-used, expired, or incomplete link now explains what happened, offers a new reset link, and points to hello@saltcinema.com when help is needed.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13473/production-safe-retry.png" alt="After view on the public SaltBot app showing a clear invalid reset link message, request-new-link action, and hello at Salt Cinema help address" />
+                </figure>
+              </div>
+            </article>
+
+            <div class="access-result-grid" aria-label="Recovery link human-confirmation proof">
+              <figure>
+                <figcaption>
+                  <span>The public app waits for the member</span>
+                  <p>Opening the email on the public SaltBot app now shows a secure confirmation first. The one-time recovery link waits until the person deliberately selects “Continue Securely.”</p>
+                </figcaption>
+                <img src="assets/release/ai-13473/production-before-continue.png" alt="Public SaltBot Secure Password Recovery screen waiting for the member to choose Continue Securely before using the one-time link" />
+              </figure>
+              <figure>
+                <figcaption>
+                  <span>The deliberate click reaches password reset</span>
+                  <p>The public-app canary did not use the link on page load, used it once after the member clicked, and then opened the real new-password form.</p>
+                </figcaption>
+                <img src="assets/release/ai-13473/production-reset-form.png" alt="Public SaltBot Reset Password form reached after the member deliberately selected Continue Securely" />
+              </figure>
+            </div>
+
+            <section class="access-user-checks" aria-labelledby="recovery-user-checks-title">
+              <div>
+                <p class="eyebrow dark">What was repeated as a user</p>
+                <h3 id="recovery-user-checks-title">Both first-use and already-used links now have a safe outcome.</h3>
+              </div>
+              <ol>
+                <li>Opening the email link reached a secure confirmation screen without using it.</li>
+                <li>The private one-time value was removed from the visible browser address before any action.</li>
+                <li>Selecting “Continue Securely” started one recovery check—never one before the member’s click.</li>
+                <li>An already-used or expired link showed a clear explanation and a button to request a new one.</li>
+                <li>The recovery help route pointed to <a href="mailto:hello@saltcinema.com">hello@saltcinema.com</a>.</li>
+              </ol>
+            </section>
+
+            <div class="access-motion-grid" aria-label="Playable recovery-link recording">
+              <article class="wide-recording">
+                <div>
+                  <p class="item-kicker">Complete recovery-link check</p>
+                  <h3>Watch the member-confirmation and password-reset path.</h3>
+                  <p>The public-app recording begins at the new confirmation screen, waits for a deliberate click, and then reaches the usable new-password form.</p>
+                </div>
+                <figure>
+                  <figcaption>Short preview</figcaption>
+                  <img src="assets/release/ai-13473/production-recovery-preview.gif" alt="Short public-app preview of the secure member-confirmation and password-reset path" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13473/production-reset-form.png" src="assets/release/ai-13473/production-recovery-walkthrough.mp4" aria-label="Complete public-app recording of the secure member-confirmation and password-reset path"></video>
+              </article>
+              <article class="wide-recording">
+                <div>
+                  <p class="item-kicker">Public-app reused-link check</p>
+                  <h3>Watch the public app explain a link that was already used.</h3>
+                  <p>The same controlled link was opened again. SaltBot still waited for the member’s click, then explained that the link could not be reused and offered a new recovery request plus team help.</p>
+                </div>
+                <figure>
+                  <figcaption>Short reused-link preview</figcaption>
+                  <img src="assets/release/ai-13473/production-reused-preview.gif" alt="Short public-app preview of the clear retry path for an already-used recovery link" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13473/production-safe-retry.png" src="assets/release/ai-13473/production-reused-walkthrough.mp4" aria-label="Complete public-app recording of the clear retry path for an already-used recovery link"></video>
+              </article>
+            </div>
+
+            <aside class="recovery-live-note">
+              <strong>Live verification</strong>
+              <p>The public app passed both controlled user journeys. A new link waited for the member’s click and then reached the password-reset form. Reusing that link also waited for the click, then gave a clear retry and team-help path. No client password was changed during this proof.</p>
+            </aside>
+
+            <div class="access-links">
+              <a class="primary-link secondary" href="https://linear.app/ai-acrobatics/issue/AI-13473/saltbot-recovery-link-immediately-expires-for-esteban-and-possibly-other" target="_blank" rel="noreferrer">View the tracked follow-up <span aria-hidden="true">↗</span></a>
+              <a class="primary-link" href="#release-readiness">Continue to the whole-product review</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="ios-answer-update" id="ios-answer-update" aria-labelledby="ios-answer-update-title">
+          <div class="report-width">
+            <div class="access-heading">
+              <div>
+                <p class="eyebrow dark">Latest iPhone answer follow-up</p>
+                <h2 id="ios-answer-update-title">A useful SaltBot answer now stays useful—without a false red error.</h2>
+              </div>
+              <p>The iPhone review found that SaltBot could return a valid conversational answer and then incorrectly add an “empty script” error underneath it. The live answer service now recognizes the useful response correctly, so the member sees one answer and no contradictory failure message.</p>
+            </div>
+
+            <div class="access-status-grid" aria-label="iPhone answer correction results">
+              <article>
+                <span>Useful answer</span>
+                <strong>Returned in one sentence</strong>
+              </article>
+              <article>
+                <span>False error</span>
+                <strong>No red warning appears</strong>
+              </article>
+              <article>
+                <span>iPhone journey</span>
+                <strong>Repeated in the app</strong>
+              </article>
+              <article>
+                <span>Live service</span>
+                <strong>Updated response path checked</strong>
+              </article>
+            </div>
+
+            <article class="access-proof-card" aria-labelledby="ios-answer-proof-title">
+              <header>
+                <div>
+                  <p class="item-kicker">Before and after</p>
+                  <h3 id="ios-answer-proof-title">The same natural-light question now ends with one useful answer.</h3>
+                </div>
+                <span class="access-passed"><i></i>Updated and user-tested</span>
+              </header>
+
+              <div class="access-before-after">
+                <figure class="phone-proof">
+                  <figcaption>
+                    <span>Before — valid answer, false failure</span>
+                    <p>SaltBot gave a conversational answer, then incorrectly told the member that the generated script was empty and to try again.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13474/before-valid-answer-false-error.png" alt="Before iPhone view showing a useful natural-light answer followed by a false empty-script error" />
+                </figure>
+                <div class="change-arrow" aria-hidden="true">→</div>
+                <figure class="phone-proof">
+                  <figcaption>
+                    <span>After — one useful answer, no red error</span>
+                    <p>The same one-sentence natural-light request returns a complete answer and ends cleanly without the contradictory warning.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13474/after-useful-answer-no-error.png" alt="After iPhone view showing the natural-light question, one useful answer, and no red empty-script error" />
+                </figure>
+              </div>
+            </article>
+
+            <section class="access-user-checks" aria-labelledby="ios-answer-user-checks-title">
+              <div>
+                <p class="eyebrow dark">What was repeated as a user</p>
+                <h3 id="ios-answer-user-checks-title">The exact iPhone question was asked again against the live answer service.</h3>
+              </div>
+              <ol>
+                <li>The signed-in iPhone app opened the new-conversation screen.</li>
+                <li>The same natural-light question asked for one short sentence.</li>
+                <li>SaltBot returned one complete, useful answer.</li>
+                <li>No “empty script” error or red warning appeared after the response.</li>
+                <li>The answer remained visible as the final result.</li>
+              </ol>
+            </section>
+
+            <div class="access-motion-grid" aria-label="Playable iPhone answer recording">
+              <article class="wide-recording portrait-recording">
+                <div>
+                  <p class="item-kicker">Complete iPhone answer check</p>
+                  <h3>Watch the exact question finish without the false error.</h3>
+                  <p>The recording begins after sign-in, shows the natural-light question generating, and ends on the useful answer with no red warning underneath it.</p>
+                </div>
+                <figure>
+                  <figcaption>Short iPhone preview</figcaption>
+                  <img src="assets/release/ai-13474/ios-answer-preview.gif" alt="Short iPhone preview of the natural-light question returning one useful answer with no red error" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13474/after-useful-answer-no-error.png" src="assets/release/ai-13474/ios-answer-walkthrough.mp4" aria-label="Complete iPhone recording of the natural-light question returning one useful answer with no red error"></video>
+              </article>
+            </div>
+
+            <aside class="recovery-live-note">
+              <strong>Where this was checked</strong>
+              <p>The current iPhone candidate was tested in Apple’s iPhone Simulator against the updated live SaltBot answer service. This confirms the corrected mobile journey; it does not claim that a new TestFlight or App Store version has already been released.</p>
+            </aside>
+
+            <div class="access-links">
+              <a class="primary-link secondary" href="https://linear.app/ai-acrobatics/issue/AI-13474/saltbot-iosedge-do-not-show-empty-script-error-after-a-valid" target="_blank" rel="noreferrer">View the tracked follow-up <span aria-hidden="true">↗</span></a>
               <a class="primary-link" href="#release-readiness">Continue to the whole-product review</a>
             </div>
           </div>
