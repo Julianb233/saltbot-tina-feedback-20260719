@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Before the privacy correction, an item number could be used outside the intended shared link</title>
+  <desc id="desc">A plain-language diagram showing a guessed item number reaching a shared asset, conversation, or brand record without the exact private share link.</desc>
+  <rect width="1440" height="1000" fill="#f8f5f1"/>
+  <rect x="84" y="84" width="1272" height="832" rx="28" fill="#fff" stroke="#d8c9bb" stroke-width="3"/>
+  <text x="130" y="158" fill="#a34624" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="3">BEFORE — PRIVACY GAP CONFIRMED</text>
+  <text x="130" y="235" fill="#1a1816" font-family="Georgia, serif" font-size="50">An ordinary item number could reach a record</text>
+  <text x="130" y="288" fill="#5f5750" font-family="Arial, sans-serif" font-size="25">The visitor did not need the exact private share link.</text>
+
+  <rect x="132" y="368" width="322" height="222" rx="24" fill="#f7ece8" stroke="#d6a999" stroke-width="3"/>
+  <circle cx="293" cy="429" r="34" fill="#a34624"/>
+  <path d="M276 429h34M293 412v34" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <text x="293" y="508" text-anchor="middle" fill="#1a1816" font-family="Georgia, serif" font-size="35">Item number</text>
+  <text x="293" y="550" text-anchor="middle" fill="#665d56" font-family="Arial, sans-serif" font-size="21">Could be requested directly</text>
+
+  <path d="M484 479h180" stroke="#a34624" stroke-width="8" stroke-linecap="round"/>
+  <path d="m638 450 34 29-34 29" fill="none" stroke="#a34624" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="700" y="340" width="570" height="320" rx="24" fill="#fffaf4" stroke="#ed9414" stroke-width="3"/>
+  <text x="744" y="403" fill="#1a1816" font-family="Georgia, serif" font-size="36">A record could be returned</text>
+  <rect x="744" y="453" width="151" height="118" rx="16" fill="#efe8e1"/>
+  <rect x="910" y="453" width="151" height="118" rx="16" fill="#efe8e1"/>
+  <rect x="1076" y="453" width="151" height="118" rx="16" fill="#efe8e1"/>
+  <text x="820" y="520" text-anchor="middle" fill="#514a44" font-family="Arial, sans-serif" font-size="22">Asset</text>
+  <text x="985" y="520" text-anchor="middle" fill="#514a44" font-family="Arial, sans-serif" font-size="22">Chat</text>
+  <text x="1152" y="520" text-anchor="middle" fill="#514a44" font-family="Arial, sans-serif" font-size="22">Brand</text>
+  <text x="985" y="618" text-anchor="middle" fill="#8b3b20" font-family="Arial, sans-serif" font-size="22" font-weight="700">Too much access behind the public page</text>
+
+  <rect x="132" y="728" width="1176" height="118" rx="18" fill="#1f1b18"/>
+  <text x="180" y="778" fill="#f5e7d8" font-family="Arial, sans-serif" font-size="23" font-weight="700">WHY THIS MATTERED</text>
+  <text x="180" y="819" fill="#fff" font-family="Arial, sans-serif" font-size="25">A shared item should open only through the exact link its owner created.</text>
+</svg>

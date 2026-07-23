@@ -21,7 +21,10 @@
   ];
   const expectedIosRevision = "ba97fa63d2764df53ee8ad5ad3aa0d87f6b406dc";
   const expectedIosFullJourneyRevision = "36adae641e551262421917896d4f786458043ca8";
-  const expectedIosFinalCandidateRevision = "f39d6972234e772653742cffed472c5e0d2657be";
+  const expectedArchivedCandidateRevision = "f39d6972234e772653742cffed472c5e0d2657be";
+  const expectedProductionWebRevision = "06e726395895e14d5b21c6e4270982f097df3003";
+  const expectedFocusedIosRevision = "8c8bd7dd8c7f54ebb50cbdebe57f04b2a57feb17";
+  const expectedRollupPreviewRevision = "35c36cfcce436c95e21781168f08342145687877";
 
   const escapeHtml = (value = "") => String(value)
     .replaceAll("&", "&amp;")
@@ -71,13 +74,32 @@
     const itemIds = report.items.map((item) => item.id);
     if (report.readyForReview !== true) errors.push("The report has not been approved for client review.");
     if (report.updated !== "July 23, 2026") errors.push("The report date is not current.");
+    if (
+      report.linearRegister?.status !== "In Review"
+      || report.linearRegister?.done !== 41
+      || report.linearRegister?.inReview !== 10
+      || report.linearRegister?.backlog !== 1
+      || report.linearRegister?.total !== 52
+    ) errors.push("The current Linear feedback register is not identified.");
     if (report.iosTestedRevision !== expectedIosRevision) errors.push("The current iPhone review version is not identified.");
     if (report.iosFullJourneyRevision !== expectedIosFullJourneyRevision) errors.push("The complete iPhone member journey is not identified.");
-    if (report.iosFinalCandidateRevision !== expectedIosFinalCandidateRevision) errors.push("The final iPhone candidate is not identified.");
-    if (report.iosCurrentSourceRevision !== expectedIosFinalCandidateRevision) errors.push("The current iPhone source does not match the final candidate.");
-    if (report.finalCandidate?.revision !== expectedIosFinalCandidateRevision) errors.push("The whole-product review does not match the final candidate.");
-    if (report.finalCandidate?.automatedTestFiles !== 297 || report.finalCandidate?.repeatedAutomatedRuns !== 2) errors.push("The repeated final automated review is incomplete.");
-    if (report.finalCandidate?.exactEdgeBoundaryChecks !== 43 || report.finalCandidate?.deployedSafeBoundaryChecks !== 102) errors.push("The final safe service-boundary review is incomplete.");
+    if (report.archivedIosCandidateRevision !== expectedArchivedCandidateRevision) errors.push("The archived July 20 iPhone evidence is not identified.");
+    if (report.productionWebRevision !== expectedProductionWebRevision) errors.push("The current production web release is not identified.");
+    if (report.focusedIosRevision !== expectedFocusedIosRevision) errors.push("The focused iPhone hotfix replay is not identified.");
+    if (
+      report.rollupPreviewRevision !== expectedRollupPreviewRevision
+      || report.rollupPreviewUrl !== "https://preview.saltbot.ai"
+    ) errors.push("The stable full-roll-up review version is not identified.");
+    if (
+      report.focusedIosReview?.version !== "1.2.2"
+      || report.focusedIosReview?.build !== "7"
+      || report.focusedIosReview?.recoveryRunsPassed !== 2
+      || report.focusedIosReview?.authenticatedSaltBotPassed !== true
+      || report.focusedIosReview?.helpAddress !== "hello@saltcinema.com"
+      || report.focusedIosReview?.temporaryRowsRemoved !== true
+    ) errors.push("The focused iPhone hotfix review is incomplete.");
+    if (report.archivedCandidate?.revision !== expectedArchivedCandidateRevision) errors.push("The archived whole-product review is not identified.");
+    if (report.archivedCandidate?.automatedTestFiles !== 297 || report.archivedCandidate?.repeatedAutomatedRuns !== 2) errors.push("The archived repeated automated review is incomplete.");
     if (
       report.productionServiceReview?.reviewedServices !== 42
       || report.productionServiceReview?.safeBoundaryChecks !== 193
@@ -85,8 +107,36 @@
       || report.productionServiceReview?.clientDataChanged !== false
       || report.productionServiceReview?.testAccountsRemoved !== true
     ) errors.push("The current production service review is incomplete.");
-    if (report.finalCandidate?.publicSharePages !== 6 || report.finalCandidate?.brandContrastSamples !== 48) errors.push("The final public-sharing review is incomplete.");
-    if (report.finalCandidate?.productionReleased !== false || report.finalCandidate?.testFlightReleased !== false || report.finalCandidate?.physicalDeviceTested !== false) errors.push("The final release boundaries are not stated accurately.");
+    if (report.archivedCandidate?.publicSharePages !== 6 || report.archivedCandidate?.brandContrastSamples !== 48) errors.push("The archived public-sharing review is incomplete.");
+    if (
+      report.productionPrivacyReview?.exactLinkOnly !== true
+      || report.productionPrivacyReview?.directListingBlocked !== true
+      || report.productionPrivacyReview?.temporaryRecordsRemoved !== true
+      || report.productionPrivacyReview?.desktopChecked !== true
+      || report.productionPrivacyReview?.phoneChecked !== true
+    ) errors.push("The current production public-sharing privacy review is incomplete.");
+    if (
+      report.rollupPreviewReview?.stableAddressAssigned !== true
+      || report.rollupPreviewReview?.publiclyReachable !== true
+      || report.rollupPreviewReview?.automatedTestFilesPassed !== 248
+      || report.rollupPreviewReview?.automatedTestFilesTotal !== 248
+      || report.rollupPreviewReview?.browserBuildPassed !== true
+      || report.rollupPreviewReview?.simulatorReleaseBuildPassed !== true
+      || report.rollupPreviewReview?.dashboardPresent !== true
+      || report.rollupPreviewReview?.brandStudioPresent !== true
+      || report.rollupPreviewReview?.brandStudioRouteWorks !== true
+      || report.rollupPreviewReview?.listingReelRemoved !== true
+      || report.rollupPreviewReview?.desktopChecked !== true
+      || report.rollupPreviewReview?.phoneChecked !== true
+      || report.rollupPreviewReview?.temporaryReviewerRemoved !== true
+      || report.rollupPreviewReview?.temporaryReviewerRecordsRemoved !== true
+    ) errors.push("The stable SaltBot preview review is incomplete.");
+    if (
+      report.releaseBoundaries?.fullRollupReleased !== false
+      || report.releaseBoundaries?.fullRollupPreviewAvailable !== true
+      || report.releaseBoundaries?.testFlightReleased !== false
+      || report.releaseBoundaries?.physicalDeviceTested !== false
+    ) errors.push("The current release boundaries are not stated accurately.");
     if (itemIds.length !== expectedIds.length || itemIds.some((id, index) => id !== expectedIds[index])) {
       errors.push("The feedback inventory is incomplete or out of order.");
     }

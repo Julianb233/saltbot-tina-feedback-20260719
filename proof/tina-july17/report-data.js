@@ -4,6 +4,14 @@ window.SALT_REPORT = {
   "sourceDocUrl": "https://docs.google.com/document/d/11xHUbS85NZxVTeAHOGDcVHmxp6fwzc1aHpkpsqcf8Dk/edit?usp=sharing",
   "followupSourceDocUrl": "https://docs.google.com/document/d/176A894SeWt9TVa-YYt0JAuBB7qtWPnA1CNytS3dX9Ec/edit?usp=sharing",
   "parentTask": "AI-13015",
+  "linearRegister": {
+    "status": "In Review",
+    "done": 41,
+    "inReview": 10,
+    "backlog": 1,
+    "total": 52,
+    "checkedAt": "2026-07-23T19:25:00.000Z"
+  },
   "linearBase": "https://linear.app/ai-acrobatics/issue/",
   "reviewers": [
     "Tina",
@@ -1372,23 +1380,47 @@ window.SALT_REPORT = {
   "iosEnvironment": "Apple iPhone Simulator",
   "iosFullJourneyRevision": "36adae641e551262421917896d4f786458043ca8",
   "iosFullJourneyTestedAt": "2026-07-19T22:06:00.000Z",
-  "iosFinalCandidateRevision": "f39d6972234e772653742cffed472c5e0d2657be",
-  "iosFinalCandidateTestedAt": "2026-07-20T09:52:00.000Z",
-  "iosCurrentSourceRevision": "f39d6972234e772653742cffed472c5e0d2657be",
-  "iosCurrentSourceTestedAt": "2026-07-20T09:52:00.000Z",
-  "finalCandidate": {
+  "archivedIosCandidateRevision": "f39d6972234e772653742cffed472c5e0d2657be",
+  "archivedIosCandidateTestedAt": "2026-07-20T09:52:00.000Z",
+  "productionWebRevision": "06e726395895e14d5b21c6e4270982f097df3003",
+  "productionWebTestedAt": "2026-07-23T18:36:59.000Z",
+  "focusedIosRevision": "8c8bd7dd8c7f54ebb50cbdebe57f04b2a57feb17",
+  "focusedIosTestedAt": "2026-07-23T19:00:36.000Z",
+  "focusedIosReview": {
+    "version": "1.2.2",
+    "build": "7",
+    "environment": "Apple iPhone 17 Pro Simulator, iOS 26.5",
+    "recoveryRunsPassed": 2,
+    "authenticatedSaltBotPassed": true,
+    "helpAddress": "hello@saltcinema.com",
+    "temporaryRowsRemoved": true
+  },
+  "rollupPreviewRevision": "35c36cfcce436c95e21781168f08342145687877",
+  "rollupPreviewUrl": "https://preview.saltbot.ai",
+  "rollupPreviewReview": {
+    "stableAddressAssigned": true,
+    "publiclyReachable": true,
+    "automatedTestFilesPassed": 248,
+    "automatedTestFilesTotal": 248,
+    "browserBuildPassed": true,
+    "simulatorReleaseBuildPassed": true,
+    "dashboardPresent": true,
+    "brandStudioPresent": true,
+    "brandStudioRouteWorks": true,
+    "listingReelRemoved": true,
+    "desktopChecked": true,
+    "phoneChecked": true,
+    "temporaryReviewerRemoved": true,
+    "temporaryReviewerRecordsRemoved": true
+  },
+  "archivedCandidate": {
     "revision": "f39d6972234e772653742cffed472c5e0d2657be",
     "testedAt": "2026-07-20T09:52:00.000Z",
     "automatedTestFiles": 297,
     "repeatedAutomatedRuns": 2,
-    "exactEdgeBoundaryChecks": 43,
-    "deployedSafeBoundaryChecks": 102,
     "publicSharePages": 6,
     "brandContrastSamples": 48,
-    "iosEnvironment": "Apple iPhone 17 Pro Simulator, iOS 26.5",
-    "productionReleased": false,
-    "testFlightReleased": false,
-    "physicalDeviceTested": false
+    "iosEnvironment": "Apple iPhone 17 Pro Simulator, iOS 26.5"
   },
   "productionServiceReview": {
     "testedAt": "2026-07-23T18:09:19.000Z",
@@ -1397,5 +1429,19 @@ window.SALT_REPORT = {
     "outsideServiceCreditsUsed": false,
     "clientDataChanged": false,
     "testAccountsRemoved": true
+  },
+  "productionPrivacyReview": {
+    "testedAt": "2026-07-23T18:36:59.000Z",
+    "exactLinkOnly": true,
+    "directListingBlocked": true,
+    "temporaryRecordsRemoved": true,
+    "desktopChecked": true,
+    "phoneChecked": true
+  },
+  "releaseBoundaries": {
+    "fullRollupReleased": false,
+    "fullRollupPreviewAvailable": true,
+    "testFlightReleased": false,
+    "physicalDeviceTested": false
   }
 };

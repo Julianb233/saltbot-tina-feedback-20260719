@@ -78,8 +78,10 @@ button{font:inherit}
 .audience i{width:4px;height:4px;border-radius:50%;background:var(--amber)}
 
 .access-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:#f1ece6}
+.preview-update{background:var(--purple-pale)}
 .recovery-link-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:var(--paper-deep)}
 .ios-answer-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:#f1ece6}
+.privacy-update{scroll-margin-top:76px;background:#e9eee7}
 .access-heading{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:24px 64px;align-items:end}
 .access-heading .eyebrow{grid-column:1/-1;margin-bottom:0}
 .access-heading h2{max-width:930px;margin:0;font-family:var(--display);font-size:clamp(3rem,5vw,5.2rem);font-weight:400;line-height:1.02;letter-spacing:-.025em}
@@ -110,6 +112,8 @@ button{font:inherit}
 .access-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
 .access-result-grid figure{border-top:5px solid var(--green)}
 .access-result-grid img{aspect-ratio:1280/633;object-fit:contain}
+.access-result-grid .phone-proof img{max-height:680px;aspect-ratio:393/852;object-fit:contain;background:#110f0e}
+.privacy-result-grid .phone-proof img{max-height:680px;aspect-ratio:390/844;object-fit:contain;background:#110f0e}
 .access-user-checks{display:grid;grid-template-columns:minmax(280px,.75fr) minmax(0,1.25fr);gap:52px;align-items:start;margin-top:24px;padding:30px;border:1px solid var(--line);background:var(--white)}
 .access-user-checks h3{margin:0;font-family:var(--display);font-size:clamp(2rem,3.2vw,3.2rem);font-weight:400;line-height:1.03}
 .access-user-checks ol{margin:0;padding-left:1.3rem;color:#4d4742}
@@ -125,6 +129,7 @@ button{font:inherit}
 .access-motion-grid img,.access-motion-grid video{display:block;width:100%;height:100%;max-height:330px;aspect-ratio:16/10;object-fit:contain;background:#110f0e}
 .access-motion-grid .portrait-recording img,.access-motion-grid .portrait-recording video{max-height:500px;aspect-ratio:1/2}
 .access-motion-grid video{align-self:end;margin-top:28px}
+.privacy-motion-grid>article:last-child{grid-column:1/-1}
 .access-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .access-links .primary-link{justify-content:center}
 .recovery-live-note{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;margin-top:24px;padding:24px 28px;border-left:4px solid var(--green);background:var(--green-pale)}
@@ -150,6 +155,8 @@ button{font:inherit}
 .truth-note{display:grid;grid-template-columns:230px 1fr;gap:28px;margin-top:30px;padding:26px 30px;border-left:4px solid var(--sand);background:var(--paper-deep)}
 .truth-note strong{font-family:var(--display);font-size:1.35rem;font-weight:400}
 .truth-note p{margin:0;color:var(--stone)}
+.register-status-note{border-left-color:var(--green);background:var(--green-pale)}
+.register-status-note p{color:#3f4e3b}
 .status-guide{margin-top:54px;padding-top:42px;border-top:1px solid var(--line)}
 .status-guide-heading{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:16px 54px;align-items:end;margin-bottom:24px}
 .status-guide-heading .eyebrow{grid-column:1/-1;margin-bottom:0}
@@ -534,6 +541,7 @@ dialog p{margin:0;padding:16px 20px;color:#e6ded6}
   .access-update{padding:82px 0 88px;scroll-margin-top:112px}
   .recovery-link-update{padding:82px 0 88px;scroll-margin-top:112px}
   .ios-answer-update{padding:82px 0 88px;scroll-margin-top:112px}
+  .privacy-update{padding:82px 0 88px;scroll-margin-top:112px}
   .access-status-grid{grid-template-columns:1fr}
   .access-status-grid article{min-height:0;padding:21px}
   .access-audit-note{grid-template-columns:1fr;gap:8px;padding:21px}
