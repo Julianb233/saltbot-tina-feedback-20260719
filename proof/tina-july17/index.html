@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1a1816" />
     <meta name="robots" content="noindex,nofollow" />
-    <meta name="description" content="Tina’s July SaltBot review report, with each reported issue beside its verified result and clear visual evidence." />
-    <title>SaltBot — Tina’s Review Report</title>
+    <meta name="description" content="Tina and Sidney’s SaltBot review report, including the latest account-access correction with visible before-and-after proof." />
+    <title>SaltBot — Client Review &amp; Verification Report</title>
     <link rel="icon" href="assets/brand/salt-logo-expanded.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="report-data.js" defer></script>
@@ -21,15 +21,16 @@
       </a>
       <nav aria-label="Report sections">
         <a href="#summary">Overview</a>
+        <a class="priority-link" href="#access-update">Access fix</a>
         <a href="#latest-follow-up">Newest 13</a>
-        <a class="priority-link" href="#release-readiness">Whole-product check</a>
-        <a href="#item-index">Current 52 points</a>
-        <a href="../tina-july15/index.html">Earlier 35 points</a>
-        <a href="#method">How we checked</a>
-        <a href="#proof">Visual proof</a>
-        <a href="#source">Source notes</a>
+        <a href="#release-readiness">Product check</a>
+        <a href="#item-index">52 issues</a>
+        <a href="../tina-july15/index.html">Earlier 35</a>
+        <a href="#method">Testing</a>
+        <a href="#proof">Proof</a>
+        <a href="#source">Source</a>
       </nav>
-      <span id="report-date">July 20, 2026</span>
+      <span id="report-date">July 23, 2026</span>
     </header>
 
     <main id="main">
@@ -50,6 +51,145 @@
             <h1 id="hero-title">The current 52 feedback points, in one clear place.<br /><em>Every result shown in plain English.</em></h1>
             <p class="hero-lede">Each current issue sits beside its visual record. Tina’s earlier 35-point review is also linked below, while the whole-product section separates earlier proof, the current final check, and the steps that still require release approval.</p>
             <div class="audience"><span>Prepared for</span><strong>Tina</strong><i></i><strong>Sidney</strong><i></i><strong>Julian</strong></div>
+          </div>
+        </section>
+
+        <section class="access-update" id="access-update" aria-labelledby="access-update-title">
+          <div class="report-width">
+            <div class="access-heading">
+              <div>
+                <p class="eyebrow dark">Latest account follow-up</p>
+                <h2 id="access-update-title">Paige’s SaltBot access is active. The incorrect Blueprint warning is gone.</h2>
+              </div>
+              <p>Sidney’s first review attempt revealed an incorrect expired-access message on Paige’s sign-in. We corrected Paige’s account and the shared sign-in rule, moved customer help to <a href="mailto:hello@saltcinema.com">hello@saltcinema.com</a>, and repeated the journey on web and in the current iPhone build.</p>
+            </div>
+
+            <div class="access-status-grid" aria-label="Latest access correction results">
+              <article>
+                <span>Paige’s account</span>
+                <strong>Active with unlimited access</strong>
+              </article>
+              <article>
+                <span>Sign-in message</span>
+                <strong>No false Blueprint expiry</strong>
+              </article>
+              <article>
+                <span>Customer help</span>
+                <strong>hello@saltcinema.com</strong>
+              </article>
+              <article>
+                <span>User testing</span>
+                <strong>Web and iPhone checks passed</strong>
+              </article>
+            </div>
+
+            <aside class="access-audit-note">
+              <strong>We checked beyond one account.</strong>
+              <p>The same imported-account pattern was reviewed across the customer list. SaltBot now requires verified membership information instead of treating an unresolved import placeholder as a confirmed Blueprint subscription. That protects other customers with the same pattern without making blanket changes to legitimate purchase history.</p>
+            </aside>
+
+            <article class="access-proof-card" aria-labelledby="access-proof-title">
+              <header>
+                <div>
+                  <p class="item-kicker">Before and after</p>
+                  <h3 id="access-proof-title">The exact problem is shown beside the corrected iPhone experience.</h3>
+                </div>
+                <span class="access-passed"><i></i>Updated and user-tested</span>
+              </header>
+
+              <div class="access-before-after">
+                <figure>
+                  <figcaption>
+                    <span>Before — incorrect account warning</span>
+                    <p>The sign-in screen called Paige a Blueprint customer, said access ended June 3, and directed her to an inbox that was not monitored.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13470/before-false-blueprint-warning-clipped.png" alt="Clipped original sign-in warning showing the incorrect Blueprint expiration message and old support address; Paige’s email is not included" />
+                </figure>
+                <div class="change-arrow" aria-hidden="true">→</div>
+                <figure class="phone-proof">
+                  <figcaption>
+                    <span>After — private, neutral recovery</span>
+                    <p>The iPhone experience no longer guesses a subscription, reveals account details, or changes a password unless the member chooses to request a secure link.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13470/after-ios-secure-recovery.png" alt="Current SaltBot iPhone recovery screen showing a neutral, secure recovery choice without account details" />
+                </figure>
+              </div>
+            </article>
+
+            <div class="access-result-grid" aria-label="Paige account and SaltBot result proof">
+              <figure>
+                <figcaption>
+                  <span>Paige’s access is active</span>
+                  <p>The account profile now shows an active status with no ending date. Customer email details are intentionally excluded from this proof.</p>
+                </figcaption>
+                <img src="assets/release/ai-13470/after-paige-active.png" alt="SaltBot subscription page showing Paige’s account as active without displaying her email address" />
+              </figure>
+              <figure>
+                <figcaption>
+                  <span>SaltBot answered a real request</span>
+                  <p>After the access correction, we asked for a new sunny-open-house caption and received a complete result. The test item was removed after the recording.</p>
+                </figcaption>
+                <img src="assets/release/ai-13470/after-saltbot-response.png" alt="SaltBot returning a complete sunny open house test caption after Paige’s access correction" />
+              </figure>
+            </div>
+
+            <section class="access-user-checks" aria-labelledby="access-user-checks-title">
+              <div>
+                <p class="eyebrow dark">What was repeated as a user</p>
+                <h3 id="access-user-checks-title">The correction was checked through the complete member path.</h3>
+              </div>
+              <ol>
+                <li>The sign-in help opened without exposing whether an email belongs to a customer.</li>
+                <li>No email was sent and no password was changed during the review.</li>
+                <li>Paige’s profile showed active access without an expiration date.</li>
+                <li>A real SaltBot prompt returned a complete new result.</li>
+                <li>Customer-help links pointed to <a href="mailto:hello@saltcinema.com">hello@saltcinema.com</a>.</li>
+              </ol>
+            </section>
+
+            <div class="access-motion-grid" aria-label="Playable access correction recordings">
+              <article>
+                <div>
+                  <p class="item-kicker">Web sign-in and recovery</p>
+                  <h3>Watch the corrected web recovery path.</h3>
+                  <p>The short preview plays automatically. The complete web recording can be played here without opening another page.</p>
+                </div>
+                <figure>
+                  <figcaption>Short preview</figcaption>
+                  <img src="assets/release/ai-13470/recovery-preview.gif" alt="Short preview of the corrected SaltBot recovery path" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13470/after-ios-secure-recovery.png" src="assets/release/ai-13470/recovery-walkthrough.mp4" aria-label="Complete recording of the corrected SaltBot recovery path"></video>
+              </article>
+              <article class="portrait-recording">
+                <div>
+                  <p class="item-kicker">iPhone sign-in and recovery</p>
+                  <h3>Watch the same check in the iPhone build.</h3>
+                  <p>This client view shows only the app screen, using a generic review address. The complete mobile journey is playable beside the short preview.</p>
+                </div>
+                <figure>
+                  <figcaption>Short iPhone preview</figcaption>
+                  <img src="assets/release/ai-13470/ios-recovery-preview.gif" alt="Short iPhone preview of the secure SaltBot recovery path" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13470/after-ios-secure-recovery.png" src="assets/release/ai-13470/ios-recovery-walkthrough.mp4" aria-label="Complete iPhone recording of the secure SaltBot recovery path"></video>
+              </article>
+              <article>
+                <div>
+                  <p class="item-kicker">SaltBot access</p>
+                  <h3>Watch SaltBot complete a real request.</h3>
+                  <p>The recording shows the prompt being submitted and the new caption appearing inside the signed-in member experience.</p>
+                </div>
+                <figure>
+                  <figcaption>Short preview</figcaption>
+                  <img src="assets/release/ai-13470/saltbot-response-preview.gif" alt="Short preview of SaltBot returning a real caption after the account correction" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13470/after-saltbot-response.png" src="assets/release/ai-13470/saltbot-response-walkthrough.mp4" aria-label="Complete recording of SaltBot returning a real caption after the account correction"></video>
+              </article>
+            </div>
+
+            <div class="access-links">
+              <a class="primary-link secondary" href="https://linear.app/ai-acrobatics/issue/AI-13470/tina-jul-23-fix-paige-false-blueprint-expiry-audit-affected-users-and" target="_blank" rel="noreferrer">View the tracked follow-up <span aria-hidden="true">↗</span></a>
+              <a class="primary-link" href="#release-readiness">Continue to the whole-product review</a>
+            </div>
           </div>
         </section>
 

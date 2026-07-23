@@ -1,6 +1,6 @@
 window.SALT_REPORT = {
   "readyForReview": true,
-  "updated": "July 20, 2026",
+  "updated": "July 23, 2026",
   "sourceDocUrl": "https://docs.google.com/document/d/11xHUbS85NZxVTeAHOGDcVHmxp6fwzc1aHpkpsqcf8Dk/edit?usp=sharing",
   "followupSourceDocUrl": "https://docs.google.com/document/d/176A894SeWt9TVa-YYt0JAuBB7qtWPnA1CNytS3dX9Ec/edit?usp=sharing",
   "parentTask": "AI-13015",

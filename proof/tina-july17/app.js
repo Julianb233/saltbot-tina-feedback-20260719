@@ -70,7 +70,7 @@
     const errors = [];
     const itemIds = report.items.map((item) => item.id);
     if (report.readyForReview !== true) errors.push("The report has not been approved for client review.");
-    if (report.updated !== "July 20, 2026") errors.push("The report date is not current.");
+    if (report.updated !== "July 23, 2026") errors.push("The report date is not current.");
     if (report.iosTestedRevision !== expectedIosRevision) errors.push("The current iPhone review version is not identified.");
     if (report.iosFullJourneyRevision !== expectedIosFullJourneyRevision) errors.push("The complete iPhone member journey is not identified.");
     if (report.iosFinalCandidateRevision !== expectedIosFinalCandidateRevision) errors.push("The final iPhone candidate is not identified.");
