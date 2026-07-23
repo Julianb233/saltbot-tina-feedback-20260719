@@ -1389,5 +1389,13 @@ window.SALT_REPORT = {
     "productionReleased": false,
     "testFlightReleased": false,
     "physicalDeviceTested": false
+  },
+  "productionServiceReview": {
+    "testedAt": "2026-07-23T18:09:19.000Z",
+    "reviewedServices": 42,
+    "safeBoundaryChecks": 193,
+    "outsideServiceCreditsUsed": false,
+    "clientDataChanged": false,
+    "testAccountsRemoved": true
   }
 };

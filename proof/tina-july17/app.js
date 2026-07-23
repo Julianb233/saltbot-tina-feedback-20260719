@@ -78,6 +78,13 @@
     if (report.finalCandidate?.revision !== expectedIosFinalCandidateRevision) errors.push("The whole-product review does not match the final candidate.");
     if (report.finalCandidate?.automatedTestFiles !== 297 || report.finalCandidate?.repeatedAutomatedRuns !== 2) errors.push("The repeated final automated review is incomplete.");
     if (report.finalCandidate?.exactEdgeBoundaryChecks !== 43 || report.finalCandidate?.deployedSafeBoundaryChecks !== 102) errors.push("The final safe service-boundary review is incomplete.");
+    if (
+      report.productionServiceReview?.reviewedServices !== 42
+      || report.productionServiceReview?.safeBoundaryChecks !== 193
+      || report.productionServiceReview?.outsideServiceCreditsUsed !== false
+      || report.productionServiceReview?.clientDataChanged !== false
+      || report.productionServiceReview?.testAccountsRemoved !== true
+    ) errors.push("The current production service review is incomplete.");
     if (report.finalCandidate?.publicSharePages !== 6 || report.finalCandidate?.brandContrastSamples !== 48) errors.push("The final public-sharing review is incomplete.");
     if (report.finalCandidate?.productionReleased !== false || report.finalCandidate?.testFlightReleased !== false || report.finalCandidate?.physicalDeviceTested !== false) errors.push("The final release boundaries are not stated accurately.");
     if (itemIds.length !== expectedIds.length || itemIds.some((id, index) => id !== expectedIds[index])) {

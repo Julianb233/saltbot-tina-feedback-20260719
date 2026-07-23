@@ -507,7 +507,7 @@
                 <p>The latest gap-closure candidate was rebuilt and checked from its exact saved version.</p>
                 <ul>
                   <li>All 298 automated tests passed twice, followed by the production build, type, style, and release-workflow checks.</li>
-                  <li>All 77 service handlers passed their frozen checks, all 15 service tests passed, and the current public service boundary replay passed 91 of 91 safe cases.</li>
+                  <li>All 77 service handlers passed their frozen checks and all 15 service tests passed. A fresh production review then covered all 42 reviewed live background services and passed 193 safe account, request, permission, and retry checks. It used disposable test accounts, confirmed their removal afterward, did not spend outside-service credits, and did not change client data.</li>
                   <li>The final web build passed 102 of 102 page-and-screen checks in the review environment. Against the public app’s current services it passed 96 of 102; only the three new public-share pages at desktop and phone widths are waiting for the matching privacy update.</li>
                   <li>The public brand, asset, and conversation pages opened without a signed-in session on desktop and phone-sized screens.</li>
                   <li>Brand Studio opened its real public page from the iPhone app in one tap and returned to the same signed-in screen.</li>
@@ -708,17 +708,21 @@
               <article class="release-proof-card" id="release-edge">
                 <header>
                   <div>
-                    <p class="item-kicker">Service, failure, and recovery boundaries</p>
-                    <h4>Expected mistakes stop clearly, retries stay bounded, and no unsafe live action was used as a test.</h4>
+                    <p class="item-kicker">Live service safeguards</p>
+                    <h4>Common account, request, permission, and retry mistakes stop clearly without affecting a client account.</h4>
                   </div>
-                  <span class="release-status"><i></i>Safe boundaries passed · AI-13286 and AI-13287</span>
+                  <span class="release-status"><i></i>Production review passed · 193 checks across 42 services</span>
                 </header>
                 <div class="release-story">
-                  <div><strong>Issue</strong><p>Some service checks could miss an unlisted function or count an expected signed-out response as a failure. A stale review setting could stop the test early, and production does not yet have the three new privacy-protected public-share reads.</p></div>
-                  <div><strong>What changed</strong><p>The review now discovers every service handler automatically, applies the correct expectation to each one, and uses the same valid public connection identity as the final build. The three public-share reads and their protected migration passed in the review environment and remain held from production until approved.</p></div>
-                  <div><strong>How it was user-tested</strong><p>All 43 exact-candidate sign-in, missing-information, not-found, and repeat-request boundaries passed across the 11 services closest to Tina’s feedback. The deployed review environment also passed 102 safe account, request, and usage-boundary checks across 18 service actions whose service source is unchanged in the final candidate. Separately, the exact web build passed 102 of 102 page checks in the review environment and 96 of 102 against the public app’s current services.</p></div>
-                  <div><strong>Result</strong><p>Expected mistakes return controlled guidance instead of an uncontrolled error, repeated work remains bounded, and the review connection now answers normally. The six public-app page checks that remain are the same three new public-share pages at desktop and phone widths; they are waiting for the protected privacy update and are not being presented as live. Paid outside services, client publishing, and microphone transcription were intentionally not triggered.</p></div>
+                  <div><strong>Issue</strong><p>A service review can look complete even when it misses a newly deployed background service or mistakes a safe signed-out stop for a broken request.</p></div>
+                  <div><strong>What changed</strong><p>The review now starts with an authenticated inventory of the live background services, then applies the correct expectation to each account type and request.</p></div>
+                  <div><strong>How it was user-tested</strong><p>On July 23, two complementary production runs covered 193 safe boundary cases across all 42 reviewed live services: 102 checks across 18 outside-service routes and 91 checks across 24 additional changed services. Disposable member and admin accounts were removed, and that cleanup was confirmed.</p></div>
+                  <div><strong>Result</strong><p>All 193 checks passed. Missing sign-in, incomplete requests, missing records, repeated requests, and account permissions returned the expected safe result. The review did not spend outside-service credits, publish client content, or alter client records.</p></div>
                 </div>
+                <aside class="boundary-note" data-tone="protected">
+                  <strong>About the visual proof below</strong>
+                  <p>The recording shows the earlier client-readable whole-product service walkthrough. The 193-check production result above is the newer direct service review; it runs behind the product and was deliberately kept from triggering paid services or changing a client account.</p>
+                </aside>
                 <div class="release-before-after">
                   <figure><figcaption><span>Before rollout — current production</span><p>All other page checks pass twice; the same three public-share pages at desktop and phone widths are waiting for the database migration.</p></figcaption><img src="assets/release/final-f39/web/edge-before.png" alt="Current production whole-product check showing 96 of 102 page checks and the six migration-gated public-share checks" /></figure>
                   <div class="change-arrow" aria-hidden="true">→</div>
