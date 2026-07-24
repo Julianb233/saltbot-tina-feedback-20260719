@@ -21,6 +21,7 @@
       </a>
       <nav aria-label="Report sections">
         <a href="#summary">Overview</a>
+        <a class="priority-link" href="#final-user-retest">Final retest</a>
         <a class="priority-link" href="#preview-update">Preview</a>
         <a class="priority-link" href="#access-update">Access</a>
         <a class="priority-link" href="#recovery-link-update">Link fix</a>
@@ -34,7 +35,7 @@
         <a href="#proof">Proof</a>
         <a href="#source">Source</a>
       </nav>
-      <span id="report-date">July 23, 2026</span>
+      <span id="report-date">July 24, 2026</span>
     </header>
 
     <main id="main">
@@ -51,10 +52,160 @@
           <div class="hero-image" role="img" aria-label="Salt Cinema team"></div>
           <div class="hero-shade"></div>
           <div class="hero-copy">
-            <p class="eyebrow">SaltBot review report</p>
-            <h1 id="hero-title">SaltBot’s latest fixes and full feedback status.<br /><em>Every result shown in plain English.</em></h1>
-            <p class="hero-lede">The corrected review link and newest production fixes are shown first with large images and playable recordings. The full 52-point register remains visible below as 41 Done, 10 In Review, and 1 Backlog item, while production approval and Apple release steps stay clearly marked as open.</p>
+            <p class="eyebrow">SaltBot client review</p>
+            <h1 id="hero-title">What was reported, what changed, and how we checked it.<br /><em>Every result is shown in plain English.</em></h1>
+            <p class="hero-lede">The newest user replay appears first with the original problem and the matching corrected result beside it. Large images and recordings play directly on this page. The original 52-point register remains below, while approval, public release, and Apple delivery stay clearly separated from completed review testing.</p>
             <div class="audience"><span>Prepared for</span><strong>Tina</strong><i></i><strong>Sidney</strong><i></i><strong>Julian</strong></div>
+          </div>
+        </section>
+
+        <section class="access-update final-user-retest" id="final-user-retest" aria-labelledby="final-user-retest-title">
+          <div class="report-width">
+            <div class="access-heading">
+              <div>
+                <p class="eyebrow dark">Final user replay</p>
+                <h2 id="final-user-retest-title">The exact Forest Creek request now completes without the error Tina saw.</h2>
+              </div>
+              <p>We repeated Tina’s exact address and wording in a new conversation. SaltBot returned ten usable hooks, accepted “Give me 10 better hooks” in the same conversation, produced ten different replacements, and kept both results after reopening the browser and the iPhone app.</p>
+            </div>
+
+            <div class="access-status-grid" aria-label="Final SaltBot user replay results">
+              <article>
+                <span>Original request</span>
+                <strong>10 complete hooks</strong>
+              </article>
+              <article>
+                <span>“10 better hooks”</span>
+                <strong>10 new hooks, no repeats</strong>
+              </article>
+              <article>
+                <span>Web and iPhone app</span>
+                <strong>Passed as signed-in members</strong>
+              </article>
+              <article>
+                <span>Fresh page load</span>
+                <strong>Both results stayed saved</strong>
+              </article>
+            </div>
+
+            <article class="access-proof-card final-proof-card" aria-labelledby="final-fetch-proof-title">
+              <header>
+                <div>
+                  <p class="item-kicker">The reported issue and the matching result</p>
+                  <h3 id="final-fetch-proof-title">The same prompt is shown on both sides. No substitute prompt was used.</h3>
+                </div>
+                <span class="access-passed"><i></i>Passed on web and in the iPhone app</span>
+              </header>
+
+              <div class="access-before-after final-before-after">
+                <figure>
+                  <figcaption>
+                    <span>Before — Tina’s request failed twice</span>
+                    <p>The Forest Creek request stopped at “Failed to fetch” and offered only Retry.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13501-final/before-failed-fetch.png" alt="Before: Tina’s exact Forest Creek request failing twice with Failed to fetch" />
+                </figure>
+                <div class="change-arrow" aria-hidden="true">→</div>
+                <figure>
+                  <figcaption>
+                    <span>After — the same request returns all ten hooks</span>
+                    <p>The exact address and wording now return ten visible, grounded hooks in one result.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13501-final/after-exact-first-ten.png" alt="After: Tina’s exact Forest Creek request followed by all ten completed hooks" />
+                </figure>
+              </div>
+            </article>
+
+            <article class="access-proof-card final-proof-card" aria-labelledby="final-followup-proof-title">
+              <header>
+                <div>
+                  <p class="item-kicker">An additional problem caught during retesting</p>
+                  <h3 id="final-followup-proof-title">“Give me 10 better hooks” now returns a complete new set instead of another Retry message.</h3>
+                </div>
+                <span class="access-passed"><i></i>10 of 10 materially different</span>
+              </header>
+
+              <div class="access-before-after final-before-after">
+                <figure>
+                  <figcaption>
+                    <span>Before — the follow-up was rejected</span>
+                    <p>Our user replay found that the first result worked, but the same-conversation revision still stopped at Retry.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13501-final/before-followup-retry.png" alt="Before: Give me 10 better hooks ending in a Retry message" />
+                </figure>
+                <div class="change-arrow" aria-hidden="true">→</div>
+                <figure>
+                  <figcaption>
+                    <span>After — ten different hooks remain saved</span>
+                    <p>All ten replacements are visible here. None repeats a hook from the first set, and the exact set remained after reloading.</p>
+                  </figcaption>
+                  <img src="assets/release/ai-13501-final/after-exact-better-ten.png" alt="After: Give me 10 better hooks followed by ten complete replacement hooks" />
+                </figure>
+              </div>
+            </article>
+
+            <div class="access-motion-grid final-motion-grid" aria-label="Playable exact SaltBot user replays">
+              <article class="wide-recording">
+                <div>
+                  <p class="item-kicker">Short visual preview</p>
+                  <h3>See the original and replacement results together.</h3>
+                  <p>This animation plays automatically. The complete user journey is available in the recording beside it.</p>
+                </div>
+                <figure>
+                  <figcaption>Exact prompt and follow-up</figcaption>
+                  <img src="assets/release/ai-13501-final/after-exact-replay.gif" alt="Animated preview of the exact Forest Creek prompt and Give me 10 better hooks succeeding" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13501-final/after-exact-better-ten.png" src="assets/release/ai-13501-final/desktop-exact-user-replay.mp4" aria-label="Complete desktop recording of the exact Forest Creek request and better-hooks follow-up"></video>
+              </article>
+              <article class="wide-recording portrait-recording">
+                <div>
+                  <p class="item-kicker">Phone-sized web replay</p>
+                  <h3>The same conversation also completes on a phone-sized screen.</h3>
+                  <p>The result stays readable and saved at 390-pixel width. Tap play to watch the complete phone-web journey.</p>
+                </div>
+                <figure>
+                  <figcaption>All ten replacement hooks on phone web</figcaption>
+                  <img src="assets/release/ai-13501-final/after-mobile-better-ten.png" alt="Phone-sized web proof showing the exact better-hooks request and all ten replacements" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13501-final/after-mobile-better-ten.png" src="assets/release/ai-13501-final/mobile-exact-user-replay.mp4" aria-label="Complete phone-sized web recording of the exact Forest Creek request and better-hooks follow-up"></video>
+              </article>
+              <article class="wide-recording portrait-recording">
+                <div>
+                  <p class="item-kicker">Clean iPhone app replay</p>
+                  <h3>The corrected conversation also survives a complete iPhone app close and relaunch.</h3>
+                  <p>A clean iPhone build signed in with a temporary member, created both sets of ten hooks, closed completely, and reopened with the replacement result still saved. The recording is playable here.</p>
+                </div>
+                <figure>
+                  <figcaption>Direct “10 better hooks” result in the iPhone app</figcaption>
+                  <img src="assets/release/ai-13501-final/ios-exact-replay.gif" alt="Short iPhone preview of the exact Forest Creek conversation returning the better-hooks result without Retry" />
+                </figure>
+                <video controls playsinline preload="metadata" poster="assets/release/ai-13501-final/after-ios-better-hooks.png" src="assets/release/ai-13501-final/ios-exact-user-replay.mp4" aria-label="Complete iPhone Simulator recording of the exact Forest Creek request and better-hooks follow-up"></video>
+              </article>
+            </div>
+
+            <section class="access-user-checks" aria-labelledby="final-user-checks-title">
+              <div>
+                <p class="eyebrow dark">What was checked as a user</p>
+                <h3 id="final-user-checks-title">The result had to remain useful after the first success screen.</h3>
+              </div>
+              <ol>
+                <li>Signed in with a new, temporary member account.</li>
+                <li>Sent Tina’s exact Forest Creek address request in a new conversation.</li>
+                <li>Confirmed one response with exactly ten complete hooks and no unsupported claims.</li>
+                <li>Sent the exact follow-up: “Give me 10 better hooks.”</li>
+                <li>Confirmed ten different replacements with the same property still in context.</li>
+                <li>Reloaded the page and confirmed that both saved results returned unchanged.</li>
+                <li>Repeated the journey on desktop web, phone-sized web, and a clean iPhone app build, with every service response successful.</li>
+                <li>Closed the iPhone app completely, reopened it, and confirmed that both ten-hook results were still saved.</li>
+                <li>Confirmed Paige-style unlimited access and the customer-help route to hello@saltcinema.com in the iPhone build.</li>
+                <li>Removed every temporary account and its test records after the replays.</li>
+              </ol>
+            </section>
+
+            <aside class="recovery-live-note final-release-note">
+              <strong>Release boundary</strong>
+              <p>This is proof from the exact saved review version and Apple’s iPhone Simulator. It does not mean the change has already replaced the public app, reached TestFlight, or been installed from the App Store. Public web release and Apple delivery remain separate approval-controlled steps.</p>
+            </aside>
           </div>
         </section>
 
@@ -62,7 +213,7 @@
           <div class="report-width">
             <div class="access-heading">
               <div>
-                <p class="eyebrow dark">Latest review-link correction</p>
+                <p class="eyebrow dark">Earlier review-link correction</p>
                 <h2 id="preview-update-title">The review link now stays on the exact SaltBot version Tina and Sidney are evaluating.</h2>
               </div>
               <p>Sidney opened the review address and received an older version. The current Dashboard and Brand Studio were not both available, Brand Studio returned a page-not-found screen, and the retired Listing Reel was still present. The stable review address is now permanently tied to the current review version.</p>

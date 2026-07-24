@@ -78,6 +78,14 @@ button{font:inherit}
 .audience i{width:4px;height:4px;border-radius:50%;background:var(--amber)}
 
 .access-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:#f1ece6}
+.final-user-retest{background:linear-gradient(180deg,#edf1e9 0%,#f7f3ee 100%)}
+.final-user-retest .access-heading h2{max-width:980px}
+.final-user-retest .access-status-grid article{background:#f5f8f2}
+.final-proof-card{border-top:7px solid var(--green)}
+.final-before-after img{min-height:360px;object-fit:contain}
+.final-motion-grid>article{border-top:5px solid var(--sand)}
+.final-release-note{border-left-color:var(--amber);background:var(--amber-pale)}
+.final-release-note p{color:#654817}
 .preview-update{background:var(--purple-pale)}
 .recovery-link-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:var(--paper-deep)}
 .ios-answer-update{padding:108px 0 118px;scroll-margin-top:76px;border-bottom:1px solid var(--line);background:#f1ece6}
